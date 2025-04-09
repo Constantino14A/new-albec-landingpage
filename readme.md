@@ -1,3 +1,3 @@
 # LINK NETLIFY FOR VIEW
 
-https://albec-landingpage.netlify.app/
+https://albec-web.netlify.app/
