@@ -1,10 +1,366 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=palmo.html" />
-  </head>
-  <body>
-    <p>Redireccionando a <a href="palmo.html">palmo.html</a>...</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALBEC</title>
+
+  <!-- FUENTE MONTSERRAT(PRINCIPAL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- FUENTE INTER(PRINCIPAL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- FUENTE FRAUNCES(HEADING) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,50&display=swap"
+    rel="stylesheet">
+
+  <!-- SWIPER JS(CARRUSEL) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- MAIN STYLE.CSS -->
+  <link rel="preload" href="./css/index-style.css" as="style">
+  <link rel="stylesheet" href="./css/index-style.css">
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+  <!-- <meta http-equiv="refresh" content="0; url=palmo.html" /> -->
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="./index.html" class="navbar__logo">
+        <img src="./src/img/logo_albec_horizontal.png" alt="Logo de ALBEC" height="48px">
+      </a>
+      <label class="navbar_menu-button">
+        <input type="checkbox" class="button-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar__enlaces">
+        <a class="navbar__enlace" href="#">Inicio</a>
+        <a class="navbar__enlace" href="#">Proyectos</a>
+        <a class="navbar__enlace" href="#">Referidos</a>
+        <a class="navbar__enlace" href="#">Conócenos</a>
+        <a class="navbar__enlace" href="#">Intranet</a>
+      </ul>
+      <a class="navbar__enlace--contacto navbar__enlace navbar__a--colorbutton" href="#">Contáctanos</a>
+    </nav>
+  </header> <!-- FIN: HEADER -->
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero__filtro"></div>
+
+        <div class="hero_texto">
+          <p class="hero_informacion-top">+1000 clientes satisfechos</p>
+          <h1 class="hero_titulo">Compra tu lote a los <span>mejores precios</span> del
+            mercado</h1>
+          <p class="hero_informacion-bottom">Contamos con ubicaciones privilegidas en cada uno de
+            nuestros proyectos en distintas zonas del país.</p>
+          <div class="hero_botones">
+            <a href="./palmo.html" class="hero_boton_a hero_boton_a-secundario">Ubícanos en una de nuestras sedes</a>
+            <a href="#" class="hero_boton_a hero_boton_a-principal elemento_translate-y">Explora nuestros
+              proyectos</a>
+          </div>
+        </div>
+
+    </section>
+
+    <section class="testimonios">
+      <p class="testimonios__titulo">Nuestros clientes nos respaldan</p>
+
+      <img src="./src/img/bg/index/1.jpg" alt="">
+
+      <div class="testimonio">
+        <img src="./src/img/clientes/Javier chileno.jpg" alt="Foto de un cliente">
+        <div class="testimonio__informacion">
+          <p class="testimonio__nombre">Javier Chileno</p>
+          <p class="testimonio__mensaje"><em>"El ambiente es bueno y cálido, Albec me apoyo cuando requería el servicio
+              de
+              agua o luz. Es una empresa confiable y una buena inversión para el futuro."</em></p>
+          <p class="testimonio__detalle">1° Casa construida en el proyecto</p>
+        </div>
+      </div>
+      <div class="testimonio">
+        <img src="./src/img/clientes/Isabel.jpg" alt="Foto de un cliente">
+        <div class="testimonio__informacion">
+          <p class="testimonio__nombre">Isabel</p>
+          <p class="testimonio__mensaje"><em>"Feliz de haber logrado comprar mi lote en Albec. Me gustó el proyecto por
+              todo
+              los beneficios que ofrecieron y lo recomendaría ya que es seguro."</em></p>
+        </div>
+      </div>
+      <div class="testimonio">
+        <img src="./src/img/clientes/Luis Villanueva.jpg" alt="Foto de un cliente">
+        <div class="testimonio__informacion">
+          <p class="testimonio__nombre">Luis Villanueva</p>
+          <p class="testimonio__mensaje"><em>"Es bonito el proyecto que están realizando e invito a los demás a que se
+              animen
+              a tener el suyo."</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="asesores">
+
+      <div class="asesores__contenido">
+        <p class="asesores__titulo">Asesores Inmobiliarios</p>
+
+        <div class="swiper swiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/lenin-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Lenin López</p>
+                  <p class="asesor__cargo">Jefe Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">966 482 576</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/pilar-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Pilar Lachapell</p>
+                  <p class="asesor__cargo">Asesora Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">968 811 225</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/belmira-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Belmira Vargas</p>
+                  <p class="asesor__cargo">Asesora inmobiliaria</p>
+                  <div>
+                    <p class="asesor__telefono">972 949 111</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/gladis-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Gladis López</p>
+                  <p class="asesor__cargo">Asesora Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">947 689 285</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/graciela-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Graciela Bueno</p>
+                  <p class="asesor__cargo">Asesora inmobiliaria</p>
+                  <div>
+                    <p class="asesor__telefono">900 730 386</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/julio-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Julio Calderon</p>
+                  <p class="asesor__cargo">Asesor Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">974 305 984</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/mayra-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Mayra Fiestas</p>
+                  <p class="asesor__cargo">Asesora Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">975 031 290</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="asesor">
+                <div class="asesor__imagen">
+                  <img src="./src/img/asesores/monica-cut-nobg.png" alt="Foto de asesor Lenin" draggable="false">
+                </div>
+                <div class="asesor__informacion">
+                  <p class="asesor__nombre">Monica Fiestas</p>
+                  <p class="asesor__cargo">Jefa Comercial</p>
+                  <div>
+                    <p class="asesor__telefono">960 271 427</p>
+                    <a class="asesor__icono boton" href="#"><img src="./src/icon/arrow-outward.svg"
+                        alt="Ícono flecha afuera" width="14"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination swiper3-pagination"></div>
+        </div> <!-- FIN: SWIPER 3 -->
+
+      </div> <!-- FIN: ASESORES CONTENIDO -->
+
+
+    </section> <!-- FIN: ASESORES -->
+
+    <section class="solicitar-info">
+
+      <div class="s_i-imagen"></div>
+      <div class="s_i-colorbg">
+      </div>
+
+      <div class="s_i-contenido contenedor">
+
+        <p class="s_i-titulo">Comunícate con nosotros</p>
+
+        <form action="" class="s_i-formulario">
+          <p class="formulario__titulo">Solicitar Información</p>
+
+          <label class="formulario__campo" for="nombre">
+            <span>Nombres y Apellidos*</span>
+            <input class="formulario__input" id="nombre" type="text" placeholder="">
+          </label>
+
+          <label class="formulario__campo" for="apellido">
+            <span>DNI*</span>
+            <input class="formulario__input" id="apellido" type="tel" placeholder=""
+              oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8">
+          </label>
+
+          <label class="formulario__campo" for="correo">
+            <span>Correo</span>
+            <input class="formulario__input" id="correo" type="email" placeholder="">
+          </label>
+
+          <label class="formulario__campo" for="celular">
+            <span>Celular</span>
+            <input class="formulario__input" id="celular" type="tel"
+              oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9">
+          </label>
+
+          <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
+              href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
+              href="https://www.albec.com.pe/politicas-medioambientales/">políticas de protección de
+              datos</a>.
+          </p>
+          <input class="formulario__input--submit" type="submit" value="Solicitar información">
+        </form> <!-- FIN: FORMULARIO -->
+
+      </div> <!-- FIN: SOLICITAR INFORMACION CONTENIDO -->
+
+    </section> <!-- FIN: SOLICITAR INFORMACION -->
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer_contenido">
+      <a href="#">
+        <img src="./src/img/logo_albec.png" Logo de empresa ALBEC" draggable="false" class="logo">
+      </a>
+      <div class="footer_redes">
+        <p>Nuestras Redes</p>
+        <ul>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/facebook.webp" alt="ícono de facebook">
+            Facebook
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/instagram.webp" alt="ícono de instagram">
+            Instagram
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/tiktok.webp" alt="ícono de tiktok">
+            Tiktok
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/linkedin.webp" alt="ícono de linkedin">
+            Linkedin
+          </a>
+        </ul>
+      </div>
+      <div class="footer_enlaces">
+        <ul>
+          <a href="#">Inicio</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Sedes</a>
+          <a href="#">Nuestro equipo</a>
+          <a href="#">Contáctanos</a>
+          <a href="#">Nosotros</a>
+        </ul>
+      </div>
+      <p class="footer_informacion-bottom">ALBEC 2025. Todos los derechos reservados.</p>
+    </div>
+
+  </footer> <!-- FIN: FOOTER -->
+
+  <p>Ir a Palmo<a href="palmo.html">palmo.html</a>...</p>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/carousel.js"></script>
+</body>
+
 </html>

@@ -27,6 +27,7 @@
     <!-- SWIPER JS(CARRUSEL) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- MAIN STYLE.CSS -->
     <link rel="preload" href="./css/style.css" as="style">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -34,7 +35,7 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="navbar__logo">
+            <a href="./index.html" class="navbar__logo">
                 <img src="./src/img/logo_albec_horizontal.png" alt="Logo de ALBEC" height="48px">
             </a>
             <label class="navbar_menu-button">
@@ -44,7 +45,7 @@
                 <span></span>
             </label>
             <ul class="navbar__enlaces">
-                <a class="navbar__enlace" href="#">Inicio</a>
+                <a class="navbar__enlace" href="./index.html">Inicio</a>
                 <a class="navbar__enlace" href="#">Proyectos</a>
                 <a class="navbar__enlace" href="#">Referidos</a>
                 <a class="navbar__enlace" href="#">Conócenos</a>
@@ -82,7 +83,7 @@
                 </div>
             </div>
 
-        </section>
+        </section> <!-- FIN: MUESTRA -->
 
         <section class="contenido fuente-principal contenedor">
 
@@ -335,13 +336,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination swiper2-pagination"></div>
 
                             <!-- If we need navigation buttons -->
                             <div class="swiper-button-prev swiper2-prev"></div>
                             <div class="swiper-button-next swiper2-next"></div>
-
-                            <!-- If we need scrollbar -->
-                            <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
 
@@ -351,6 +351,7 @@
 
 
             <div class="informacion__derecha">
+
                 <form class="formulario tarjeta-grid">
                     <p class="formulario__titulo">Completa el formulario y nosotros te contactaremos</p>
                     <label class="formulario__campo" for="nombre">
@@ -376,10 +377,11 @@
                             datos</a>.
                     </p>
                     <input class="formulario__input--submit" type="submit" value="Solicitar información">
-                </form>
-            </div> <!-- FIN INFORMACION DERECHA -->
+                </form> <!-- FIN: FORMULARIO -->
 
-        </section> <!-- FIN CONTENIDO -->
+            </div> <!-- FIN: INFORMACION DERECHA -->
+
+        </section> <!-- FIN: CONTENIDO -->
 
     </main>
 
@@ -412,7 +414,7 @@
             </div>
             <div class="footer_enlaces">
                 <ul>
-                    <a href="#">Inicio</a>
+                    <a href="./index.html">Inicio</a>
                     <a href="#">Proyectos</a>
                     <a href="#">Sedes</a>
                     <a href="#">Nuestro equipo</a>
