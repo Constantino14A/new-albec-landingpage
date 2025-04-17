@@ -3,9 +3,13 @@
     --gris: #777777;
     --grisClaro: #e8e8e8;
     --grisClaro2: #f1f1f1;
-    --grisBorder: #a3a3a3aa;
+    --grisBorder: #e5e7eb;
+    --grisBorderHigh: #a3a3a3aa;
     --grisText: #6b7280;
+    --grisTextMenu: #374151;
     --grisBgText: #f9fafb;
+    --grisBgFocus: #f3f4f6;
+    --grisShadow: #0000001a;
     --negro: #000;
     --negroLight: #11181d;
     --negroAlpha: #00000080;
@@ -17,6 +21,7 @@
     --colorPrimario2: #055f91;
     --colorPrimario3: #02a5b4;
     --colorSecundario: #fbb12f;
+    --colorSecundario2: #ec9b0f;
     --crema: #FBF5DD;
 }
 
@@ -697,6 +702,15 @@ body {
     transform: scaleX(1.1) scaleY(1.1);
 }
 
+.elemento_translate-y {
+    transition: all 300ms;
+}
+
+.elemento_translate-y:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 /* ((REUTILIZABLES)) */
 
 .header {
@@ -872,7 +886,7 @@ body {
     .swiper2 {
         width: 85%;
     }
-    
+
     .conoce__elemento {
         padding: 3rem;
     }

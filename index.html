@@ -63,16 +63,45 @@
     <section class="hero">
       <div class="hero__filtro"></div>
 
-        <div class="hero_texto">
-          <p class="hero_informacion-top">+1000 clientes satisfechos</p>
-          <h1 class="hero_titulo">Compra tu lote a los <span>mejores precios</span> del
-            mercado</h1>
-          <p class="hero_informacion-bottom">Contamos con ubicaciones privilegidas en cada uno de
+        <div class="hero__texto">
+          <p class="hero__informacion-top">+1000 clientes satisfechos</p>
+          <!-- TITULO SIN EFECTO WAVE -->
+<!--           <h1 class="hero__titulo">Compra tu lote a los <span>mejores precios</span> del
+            mercado</h1> --> 
+            
+          <h1 class="hero__titulo">Compra tu lote a los 
+            <span class="wave-text">
+              <span>m</span><span>e</span><span>j</span><span>o</span><span>r</span><span>e</span><span>s</span><span>&nbsp;</span><span>p</span><span>r</span><span>e</span><span>c</span><span>i</span><span>o</span><span>s</span>
+            </span>del mercado
+          </h1>
+          <p class="hero__informacion-bottom">Contamos con ubicaciones privilegidas en cada uno de
             nuestros proyectos en distintas zonas del país.</p>
-          <div class="hero_botones">
-            <a href="./palmo.html" class="hero_boton_a hero_boton_a-secundario">Ubícanos en una de nuestras sedes</a>
-            <a href="#" class="hero_boton_a hero_boton_a-principal elemento_translate-y">Explora nuestros
-              proyectos</a>
+          <div class="hero__botones">
+
+            <a href="./palmo.html" class="hero__boton_a hero__boton_a-secundario">
+              <span>Ubícanos en una de nuestras sedes</span>
+              <svg class="icon icon-arrow-outward" aria-hidden="true">
+                <use xlink:href="/src/icon/sprites.svg#icon-arrow-outward"></use>
+              </svg>
+            </a>
+
+            <div class="hero__boton-principal">
+              
+              <a href="#" class="hero__boton_a hero__boton_a-primario elemento_translate-y">
+                <span>Explora nuestros proyectos</span>
+                <svg class="icon icon-arrow-outward" aria-hidden="true">
+                  <use xlink:href="/src/icon/sprites.svg#icon-arrow-outward"></use>
+                </svg>
+              </a> 
+              <div class="dropdown-menu tarjeta">
+                <a href="./palmo.html">Palmo Dorado</a>
+                <a href="./diamante.html">Diamante de Punta Sal</a>
+                <a href="./sanignacio.html">Diamante de Mórrope</a>
+                <a href="./paraisosol.html">Villa Real</a>
+              </div>
+              
+            </div>
+
           </div>
         </div>
 
@@ -83,7 +112,7 @@
 
       <img src="./src/img/bg/index/1.jpg" alt="">
 
-      <div class="testimonio">
+      <div class="testimonio tarjeta">
         <img src="./src/img/clientes/Javier chileno.jpg" alt="Foto de un cliente">
         <div class="testimonio__informacion">
           <p class="testimonio__nombre">Javier Chileno</p>
@@ -93,7 +122,7 @@
           <p class="testimonio__detalle">1° Casa construida en el proyecto</p>
         </div>
       </div>
-      <div class="testimonio">
+      <div class="testimonio tarjeta">
         <img src="./src/img/clientes/Isabel.jpg" alt="Foto de un cliente">
         <div class="testimonio__informacion">
           <p class="testimonio__nombre">Isabel</p>
@@ -102,7 +131,7 @@
               los beneficios que ofrecieron y lo recomendaría ya que es seguro."</em></p>
         </div>
       </div>
-      <div class="testimonio">
+      <div class="testimonio tarjeta">
         <img src="./src/img/clientes/Luis Villanueva.jpg" alt="Foto de un cliente">
         <div class="testimonio__informacion">
           <p class="testimonio__nombre">Luis Villanueva</p>
