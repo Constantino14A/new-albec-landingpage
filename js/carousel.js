@@ -67,3 +67,8 @@ var swiper3 = new Swiper('.swiper3', {
     clickable: true,
   },
 });
+
+var swiper4 = new Swiper(".swiperTestimonios", {
+  effect: "cards",
+  grabCursor: true,
+});

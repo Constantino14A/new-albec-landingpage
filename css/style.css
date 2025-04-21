@@ -3,13 +3,13 @@
     --gris: #777777;
     --grisClaro: #e8e8e8;
     --grisClaro2: #f1f1f1;
-    --grisBorder: #e5e7eb;
+    --grisBorder: #e5e7eb; /* seleccionado */
     --grisBorderHigh: #a3a3a3aa;
-    --grisText: #6b7280;
-    --grisTextMenu: #374151;
-    --grisBgText: #f9fafb;
-    --grisBgFocus: #f3f4f6;
-    --grisShadow: #0000001a;
+    --grisText: #6b7280; /* seleccionado */
+    --grisTextMenu: #374151; /* seleccionado */
+    --grisBgText: #f9fafb; /* seleccionado */
+    --grisBgFocus: #f3f4f6; /* seleccionado */
+    --grisShadow: #0000001a; /* seleccionado */
     --negro: #000;
     --negroLight: #11181d;
     --negroAlpha: #00000080;
@@ -146,67 +146,6 @@ body {
     gap: 1rem;
 }
 
-
-/* 
-.muestra__banner {
-    width: fit-content;
-    font-family: var(--fuentePrincipal);
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 5rem 5rem;
-
-}
-
-.muestra__banner--default {
-    width: fit-content;
-    background-color: var(--colorPrimario);
-    color: var(--blanco);
-}
-
-.muestra__banner p:nth-child(1) {
-    font-size: 3rem;
-    font-weight: 500;
-    padding: .3rem 1rem;
-}
-
-.muestra__banner p:nth-child(2) {
-    font-family: var(--fuenteHeading);
-    color: var(--colorSecundario);
-    font-size: 7.3rem;
-    font-weight: bolder;
-    text-shadow: 3px 3px 8px var(--negroAlpha);
-    background-color: var(--negroAlpha);
-    backdrop-filter: blur(10px);
-
-}
-
-.muestra__banner p:nth-child(3) {
-    font-style: italic;
-    font-size: 2.9rem;
-    padding: .5rem 1rem;
-}
-
-.muestra__banner p:nth-child(3) span {
-    font-family: var(--fuenteHeading);
-    font-size: 4.3rem;
-    font-weight: bolder;
-}
-
-.muestra__banner p:nth-child(4) {
-    background-color: var(--gris);
-    font-size: 1.9rem;
-    font-weight: 500;
-    padding: .7rem 1rem;
-
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
- */
 /* ((CONTENIDO)) */
 
 .contenido {
@@ -218,8 +157,6 @@ body {
 }
 
 /* ((INFORMACION)) */
-
-.informacion__izquierda {}
 
 /* ((INFORMACION: ENTRADA)) */
 
@@ -482,7 +419,6 @@ body {
     border-radius: .8rem;
 
     padding: 3rem 4.5rem;
-
 }
 
 .conoce__elemento p:nth-of-type(1) {
@@ -513,7 +449,6 @@ body {
 
 /* => INFORMACION DERECHA */
 
-.informacion__derecha {}
 
 /* => FORMULARIO */
 
