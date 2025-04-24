@@ -299,7 +299,7 @@
 }
 
 .testimonios-img:nth-of-type(1) {
-    background-image: url(../src/img/bg/index/3.jpg);
+    background-image: url(../src/img/clientes/clientes.webp);
     background-size: cover;
     background-position: center;
     aspect-ratio: 5 / 8;
@@ -308,7 +308,7 @@
 }
 
 .testimonios-img:nth-of-type(2) {
-    background-image: url(../src/img/bg/index/2.jpg);
+    background-image: url(../src/img/clientes/clientes-2.webp);
     background-size: cover;
     background-position: center;
     aspect-ratio: 1 / 1;
