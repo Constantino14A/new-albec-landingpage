@@ -71,4 +71,10 @@ var swiper3 = new Swiper('.swiper3', {
 var swiper4 = new Swiper(".swiperTestimonios", {
   effect: "cards",
   grabCursor: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiperTestimonio-next',
+      prevEl: '.swiperTestimonio-prev',
+    },
 });
