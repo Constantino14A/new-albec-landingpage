@@ -21,77 +21,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Video elementos
-  const video = document.getElementById("video-clientes");
-  const muteBtn = document.getElementById("mute-toggle");
-  const volumenBar = document.getElementById("volumen-barra");
-  const volumenFill = document.getElementById("volumen-fill");
+const video = document.getElementById("video-clientes");
+const muteBtn = document.getElementById("mute-toggle");
+const volumenRange = document.getElementById("volumen-range");
 
-  let isDragging = false;
+let isDragging = false;
 
-  // Inicializar estado
-  video.volume = 0;
-  video.muted = true;
+// Inicializar estado
+video.volume = 0;
+video.muted = true;
+volumenRange.value = 0; // Barra de volumen al 0 al principio
+
+// Función para actualizar el ícono de volumen
+function updateVolumeUI() {
+  muteBtn.innerHTML = video.muted || video.volume === 0 ? iconVolMute : iconVolUp;
+}
+
+// Función que ajusta el volumen desde la barra
+volumenRange.addEventListener("input", () => {
+  const vol = volumenRange.value / 100;
+  video.volume = vol;
+  video.muted = vol === 0;
   updateVolumeUI();
+});
 
-  // --- Funciones reutilizables ---
-  
-  function updateVolumeUI() {
-    volumenFill.style.height = `${video.volume * 100}%`;
-    muteBtn.innerHTML = video.muted ? iconVolMute : iconVolUp;
+// Toggle de mute
+muteBtn.addEventListener("click", () => {
+  if (video.muted) {
+    video.muted = false;
+    if (video.volume === 0) {
+      video.volume = 0.29; // Si desmutea y volumen está en 0, poner mínimo
+      volumenRange.value = 29;
+    }
+  } else {
+    video.muted = true;
+    video.volume = 0; // Si mutea, bajamos el volumen a 0
+    volumenRange.value = 0;
   }
+  updateVolumeUI();
+});
 
-  function setVolumeFromPosition(y) {
-    const rect = volumenBar.getBoundingClientRect();
-    const percentage = 1 - (y - rect.top) / rect.height;
-    const volume = Math.max(0, Math.min(1, percentage));
-
-    video.volume = volume;
-    video.muted = volume === 0;
-    updateVolumeUI();
+// Para reiniciar video cuando vuelves a la pestaña
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    video.currentTime = 0;
+    video.play();
   }
+});
 
-  // --- Event Listeners ---
-  
-  muteBtn.addEventListener("click", () => {
-    if (video.muted) {
-      video.muted = false;
-      if (video.volume === 0) {
-        video.volume = 0.29; // Si desmutea y volumen está en 0, poner mínimo
-      }
-    } else {
-      video.muted = true;
-      video.volume = 0; // Si mutea, bajamos el volumen a 0
-    }
-    updateVolumeUI();
-  });
+updateVolumeUI();
 
-  volumenBar.addEventListener("click", (e) => {
-    setVolumeFromPosition(e.clientY);
-  });
-
-  volumenBar.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    volumenFill.style.transition = "none";
-    setVolumeFromPosition(e.clientY);
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-      setVolumeFromPosition(e.clientY);
-    }
-  });
-
-  document.addEventListener("mouseup", () => {
-    if (isDragging) {
-      volumenFill.style.transition = "height 0.2s ease";
-      isDragging = false;
-    }
-  });
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") {
-      video.currentTime = 0;
-      video.play();
-    }
-  });
 });

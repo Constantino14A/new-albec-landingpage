@@ -193,24 +193,23 @@
 
           </div> <!-- FIN: TESTIMONIOS CONTENIDO -->
 
+          <div class="banner-2">
+            <img src="./src/img/bg/index/albec-globos.png" alt="Imagen de globos metálicos con las letras de ALBEC">
+            <p class="banner-texto">Acá va información sobre clientes</p>
+          </div> <!-- FIN: TESTIMNIOS: BANNER 2 -->
+
           <div class="testimonios-video">
             <video id="video-clientes" autoplay muted loop playsinline preload="none">
               <source src="video_720_optimizado.mp4" type="video/mp4">
             </video>
 
             <div class="video-controles">
-              
+              <!-- Barra de volumen transformada en slider -->
+              <input type="range" id="volumen-range" min="0" max="100" value="0" class="level">
               <!-- Botones de sonido -->
-              <button id="mute-toggle">🔊</button>
-              
-              <!-- Contenedor de la barra de volumen -->
-              <div id="volumen-barra">
-                <div id="volumen-fill"></div>
-              </div>
-
-            </div>
-
-
+              <button id="mute-toggle"></button>
+            </div> <!-- FIN: VIDEO CONTROLES -->
+            
           </div> <!-- FIN: TESTIMONIOS VIDEO -->
 
 

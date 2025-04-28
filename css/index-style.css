@@ -343,19 +343,6 @@
     width: min(100%, 36rem);
 }
 
-/* 
-.testimonios__titulo {
-    color: var(--blanco);
-    font-size: 3rem;
-    font-family: var(--fuentePrincipal);
-    font-style: italic;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 8rem;
-    width: 100%;
-}
- */
-
 /* ((TESTIMONIOS: CONTENIDO)) */
 
 .swiperTestimonios {
@@ -418,18 +405,6 @@
     height: 25%;
 }
 
-/* 
-.testimonio__filtro::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 101%;
-    background: 
-    linear-gradient(to bottom, #ffffff00 70%, #ffffffc4);
-} 
-*/
-
 .testimonio img {
     border-radius: 50%;
     z-index: 2;
@@ -464,30 +439,61 @@
     height: fit-content;
 }
 
-/* ((TESTIMONIOS: CONTENIDO)) */
-
-.testimonios-video {
-    overflow: hidden;
-    margin: 0 auto;
-    aspect-ratio: 6 / 1;
-    /* width: min(100%, 30rem); */
+/* ((BANNER-2)) */
+.banner-2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 7rem 0;
+}
+
+.banner-2 img {
+    width: min(100%, 60rem);
+    filter: brightness(0.6);
+}
+
+.banner-texto {
+    color: var(--blanco);
+    font-size: 3.6rem;
+    font-family: var(--fuentePrincipal);
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+/* ((TESTIMONIOS: CONTENIDO)) */
+.testimonios-video {
+    grid-column: 2 / 3;
+    overflow: hidden;
+    margin: 0 auto;
+    aspect-ratio: 10 / 8;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: min(100%, 40rem);
 }
 
 .testimonios-video video {
-    width: 98%;
-    height: 98%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
 .video-controles {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 3rem;
     align-items: center;
-    padding: 0 1rem 1rem 0;
+    /* padding: 0 1rem 1rem 0; */
+    height: max-content;
+    width: 6rem;
 }
 
 .video-controles button {
@@ -497,48 +503,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: var(--colorPrimario);
+    border: none;
+    border-radius: 4rem;
 }
 
 .video-controles .icon-bullhorn {
     width: 3rem;
     height: 3rem;
     color: inherit;
+
 }
 
-.video-controles button {
-    background-color: var(--colorPrimario);
-    border: none;
-    border-radius: 4rem;
-}
-
-/* Estilos generales */
-#volumen-barra {
-    position: relative;
-    width: 30px;
-    height: 100px;
+#volumen-range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10rem;
+    /* Ancho de la barra */
+    /* Alto de la barra */
     background: var(--colorPrimario);
-    /* Fondo gris oscuro */
     border-radius: 8px;
-    overflow: hidden;
-    display: block;
-    /* Inicialmente escondida */
     cursor: pointer;
+    transform: rotate(270deg);
+    /* Girar el slider para hacerlo vertical */
+    transform-origin: center;
+    overflow: hidden;
+    height: 3rem;
 }
 
-/* Parte que representa el volumen actual */
-#volumen-fill {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    /* Puedes iniciar en 50% */
-    background: white;
-    transition: height 0.2s ease;
-    
+#volumen-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    box-shadow: -200px 0 0 200px white;
+    /* Efecto visual de volumen */
 }
 
-/* Botones de sonido */
+#volumen-range::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border: none;
+    box-shadow: -200px 0 0 200px white;
+    background: transparent;
+}
+
 #mute-toggle {
     margin: 10px;
     cursor: pointer;
@@ -784,7 +793,7 @@
 
     /* ======> TESTIMONIOS */
     .testimonios {}
-
+    
     .testimonios-contenedor {
         align-items: center;
         justify-content: space-between;
@@ -792,12 +801,13 @@
         /* layout */
         display: grid;
         grid-template-columns: 3fr 2fr;
+        row-gap: 10rem;
     }
-
+    
     .testimonios-img-layout {
         aspect-ratio: 10 / 12;
     }
-
+    
     .testimonios-img-layout .testimonios-img:nth-of-type(2) {
         aspect-ratio: 1 / 1;
         position: absolute;
@@ -805,7 +815,7 @@
         top: 0;
         width: 50%;
     }
-
+    
     .testimonios-img-layout .testimonios-img:nth-of-type(3) {
         aspect-ratio: 15 / 9;
         position: absolute;
@@ -813,10 +823,17 @@
         bottom: 0;
         width: 80%;
     }
-
+    
     .testimonios-contenido {
         max-width: 27rem;
     }
+    
+    /* ======> BANNER 2 */
+    
+    .banner-2 {
+        padding: 0;
+    }
+
 
     /* ======> SOLICITAR INFO */
     .solicitar-info {
@@ -896,8 +913,9 @@
         /* layout */
         top: unset;
         bottom: 0;
-        left: 0;
-        width: 58%;
+        /* left: 0; */
+        right: 42%;
+        width: min(58%, 34.3rem);
     }
 
 
