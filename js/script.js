@@ -8,80 +8,90 @@ const iconVolMute = `
   <path d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Z"/>
 </svg>`;
 
-// Locomotive Scroll
 document.addEventListener("DOMContentLoaded", function () {
-  const scroll = new LocomotiveScroll({
+  // Locomotive Scroll
+  new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
     smoothMobile: true,
-    lerp: 0.07, // Controla la suavidad del desplazamiento (0.07 es un buen punto medio)
-    multiplier: 1.0, // Velocidad del scroll (1.0 para una sensación natural)
-    smartphone: {
-      smooth: true
-    },
-    tablet: {
-      smooth: true
+    lerp: 0.07,
+    multiplier: 1.0,
+    smartphone: { smooth: true },
+    tablet: { smooth: true }
+  });
+
+  // Video elementos
+  const video = document.getElementById("video-clientes");
+  const muteBtn = document.getElementById("mute-toggle");
+  const volumenBar = document.getElementById("volumen-barra");
+  const volumenFill = document.getElementById("volumen-fill");
+
+  let isDragging = false;
+
+  // Inicializar estado
+  video.volume = 0;
+  video.muted = true;
+  updateVolumeUI();
+
+  // --- Funciones reutilizables ---
+  
+  function updateVolumeUI() {
+    volumenFill.style.height = `${video.volume * 100}%`;
+    muteBtn.innerHTML = video.muted ? iconVolMute : iconVolUp;
+  }
+
+  function setVolumeFromPosition(y) {
+    const rect = volumenBar.getBoundingClientRect();
+    const percentage = 1 - (y - rect.top) / rect.height;
+    const volume = Math.max(0, Math.min(1, percentage));
+
+    video.volume = volume;
+    video.muted = volume === 0;
+    updateVolumeUI();
+  }
+
+  // --- Event Listeners ---
+  
+  muteBtn.addEventListener("click", () => {
+    if (video.muted) {
+      video.muted = false;
+      if (video.volume === 0) {
+        video.volume = 0.29; // Si desmutea y volumen está en 0, poner mínimo
+      }
+    } else {
+      video.muted = true;
+      video.volume = 0; // Si mutea, bajamos el volumen a 0
+    }
+    updateVolumeUI();
+  });
+
+  volumenBar.addEventListener("click", (e) => {
+    setVolumeFromPosition(e.clientY);
+  });
+
+  volumenBar.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    volumenFill.style.transition = "none";
+    setVolumeFromPosition(e.clientY);
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      setVolumeFromPosition(e.clientY);
     }
   });
-});
 
-// video testimonios
-const video = document.getElementById("video-clientes");
-const muteBtn = document.getElementById("mute-toggle");
-const volumenBtn = document.getElementById("volumen-toggle");
-const volumenBar = document.getElementById("volumen-barra");
-
-
-// Mostrar/ocultar barra
-volumenBtn.addEventListener("click", () => {
-  const isVisible = volumeBar.style.display === "block";
-  volumenBar.style.display = isVisible ? "none" : "block";
-});
-
-// Toggle mute
-muteBtn.addEventListener("click", () => {
-  video.muted = !video.muted;
-
-  if (video.muted) {
-    muteBtn.innerHTML = iconVolMute;  // Cambiar a ícono de mute
-    volumenBar.value = 0;
-  } else {
-    muteBtn.innerHTML = iconVolUp;    // Cambiar a ícono de volumen
-    if (volumenBar.value == 0) {
-      volumenBar.value = 29;
-      video.volume = 0.29;
+  document.addEventListener("mouseup", () => {
+    if (isDragging) {
+      volumenFill.style.transition = "height 0.2s ease";
+      isDragging = false;
     }
-  }
-});
+  });
 
-// Cambiar volumen con la barra
-volumenBar.addEventListener("input", () => {
-  const vol = volumenBar.value / 100;
-  video.volume = vol;
-
-  if (vol === 0) {
-    video.muted = true;
-    muteBtn.innerHTML = iconVolMute;  // Cambiar a ícono de mute
-  } else {
-    video.muted = false;
-    muteBtn.innerHTML = iconVolUp;    // Cambiar a ícono de volumen
-  }
-});
-
-// Toggle de la visibilidad de la barra de volumen
-volumenBtn.addEventListener("click", () => {
-  volumenBtn.classList.toggle("active");
-  if (volumenBtn.classList.contains("active")) {
-    volumenBar.style.display = "block";
-  } else {
-    volumenBar.style.display = "none";
-  }
-});
-
-document.addEventListener("visibilitychange", () => {
-  const video = document.getElementById("video-clientes");
-  if (document.visibilityState === "visible") {
-    video.currentTime = 0;
-    video.play();
-  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      video.currentTime = 0;
+      video.play();
+    }
+  });
 });
