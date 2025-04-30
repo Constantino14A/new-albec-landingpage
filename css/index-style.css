@@ -194,7 +194,7 @@
     box-shadow: 0 0 0 4px var(--grisBgFocus);
 }
 
-.icon {
+.icon-arrow-outward {
     width: 2rem;
     height: 2rem;
     color: inherit;
@@ -440,12 +440,13 @@
 }
 
 /* ((BANNER-2)) */
+
 .banner-2 {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 7rem 0;
+    padding-bottom: 7rem;
 }
 
 .banner-2 img {
@@ -470,30 +471,36 @@
 
 /* ((TESTIMONIOS: CONTENIDO)) */
 .testimonios-video {
-    grid-column: 2 / 3;
+
     overflow: hidden;
     margin: 0 auto;
-    aspect-ratio: 10 / 8;
+    /* aspect-ratio: 10 / 8; */
+    /* aspect-ratio: 10 / 12; */
     display: flex;
-    justify-content: center;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     width: min(100%, 40rem);
+    height: 100%;
 }
 
 .testimonios-video video {
-    height: 100%;
+    aspect-ratio: 1 / 1;
+    width: 80%;
     object-fit: cover;
     display: block;
 }
 
 .video-controles {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    /* flex-direction: column; */
+    flex-direction: row-reverse;
+    gap: 1rem;
     align-items: center;
+    margin-top: 1rem;
     /* padding: 0 1rem 1rem 0; */
-    height: max-content;
-    width: 6rem;
+    /* height: max-content;
+    width: 6rem; */
 }
 
 .video-controles button {
@@ -525,7 +532,7 @@
     background: var(--colorPrimario);
     border-radius: 8px;
     cursor: pointer;
-    transform: rotate(270deg);
+    /* transform: rotate(270deg); */
     /* Girar el slider para hacerlo vertical */
     transform-origin: center;
     overflow: hidden;
@@ -549,7 +556,6 @@
 }
 
 #mute-toggle {
-    margin: 10px;
     cursor: pointer;
 }
 
@@ -624,7 +630,7 @@
 /* ((ASESORES)) */
 
 .asesores {
-    background-color: var(--blanco);
+    background-color: var(--colorSecundarioSoft);
     padding: 7rem 0;
 }
 
@@ -635,10 +641,10 @@
 
 .asesores__titulo {
     color: var(--negro);
-    font-size: 3rem;
+    font-size: 3.6rem;
     font-family: var(--fuentePrincipal);
     font-weight: 800;
-    text-align: center;
+    text-align: left;
 }
 
 .swiper3 {
@@ -793,7 +799,7 @@
 
     /* ======> TESTIMONIOS */
     .testimonios {}
-    
+
     .testimonios-contenedor {
         align-items: center;
         justify-content: space-between;
@@ -803,11 +809,11 @@
         grid-template-columns: 3fr 2fr;
         row-gap: 10rem;
     }
-    
+
     .testimonios-img-layout {
         aspect-ratio: 10 / 12;
     }
-    
+
     .testimonios-img-layout .testimonios-img:nth-of-type(2) {
         aspect-ratio: 1 / 1;
         position: absolute;
@@ -815,7 +821,7 @@
         top: 0;
         width: 50%;
     }
-    
+
     .testimonios-img-layout .testimonios-img:nth-of-type(3) {
         aspect-ratio: 15 / 9;
         position: absolute;
@@ -823,13 +829,17 @@
         bottom: 0;
         width: 80%;
     }
-    
+
     .testimonios-contenido {
         max-width: 27rem;
     }
-    
+
+    .testimonios-video {
+        grid-column: 2 / 3;
+    }
+
     /* ======> BANNER 2 */
-    
+
     .banner-2 {
         padding: 0;
     }
