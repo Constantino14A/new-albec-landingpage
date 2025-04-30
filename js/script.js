@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
   new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
-    smoothMobile: true,
-    lerp: 0.07,
-    multiplier: 1.0,
-    smartphone: { smooth: true },
+    smoothMobile: !isLowEndMobile,
+    lerp: isLowEndMobile ? 0.25 : 0.1,
+    multiplier: isLowEndMobile ? 1.3 : 1.0,
+    smartphone: { smooth: !isLowEndMobile },
     tablet: { smooth: true }
   });
 
