@@ -561,70 +561,77 @@
 
 /* ((SOLICITAR-INFO)) */
 
+/* SOLICITAR INFO: SWIPER4 */
+
 .solicitar-info {
     background-color: var(--blanco);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 7rem 0;
-    height: 120rem;
-}
-
-.s_i-imagen {
-    background-image: linear-gradient(to bottom, #00000000 20%, var(--colorPrimario)), url(../src/img/bg/index/3.jpg);
+    /* background-image: url(../src/img/bg/index/solicitar_info.jpg);
     background-size: cover;
-    background-position: center;
-    aspect-ratio: 10/10;
-}
-
-
-.s_i-colorbg {
-    flex: 1;
-    background-color: var(--colorPrimario);
-}
-
-/* ((SOLICITAR-INFO: CONTENIDO)) */
-
-.s_i-contenido {
+    background-position: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-bottom: 4rem;
+    /* layout */
+    /* padding: 7rem 0; */
 }
 
-.s_i-titulo {
-    color: var(--blanco);
-    font-size: 3rem;
-    font-family: var(--fuentePrincipal);
-    font-weight: 800;
-    text-align: center;
+.swiper5 {
+    height: 60rem;
+    /* width: min(100%, 52rem); */
+    aspect-ratio: 1 / 1;
 }
 
-.s_i-formulario {
+.swiper5 .swiper-slide {
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    user-select: none;
+}
+
+.swiper5 .swiper-slide img {
+    width: 100%;
+}
+
+
+/* .solicitar-info .formulario {
     background-color: var(--blanco);
     font-family: var(--fuentePrincipal);
     border-radius: .8rem;
-    border: .1rem solid var(--gris);
+    border: .1rem solid var(--grisBorder);
+
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+    padding: 3.2rem;
+    width: min(100%, 40rem);
+} */
+
+.solicitar-info .formulario {
+    background-color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    border: none;
+/*     border-radius: .8rem;
+    border: .1rem solid var(--grisBorder); */
+    box-shadow: none;
 
     /* layout */
     display: flex;
-    gap: 1.5rem;
+    gap: 2.4rem;
     flex-direction: column;
-    padding: 3rem;
+    padding: 3.2rem;
     width: min(100%, 40rem);
 }
 
-.s_i-formulario .formulario__titulo {
-    font-size: 2.2rem;
+.solicitar-info .formulario .formulario__titulo {
+    font-size: 2rem;
     font-family: var(--fuentePrincipal);
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
+    font-weight: 500;
+    line-height: 28px;
+    /* text-transform: uppercase; */
+    text-align: left;
+    width: 100%;
 }
 
 /* ((ASESORES)) */
@@ -647,6 +654,7 @@
     text-align: left;
 }
 
+/* ASESORES: SWIPER3 */
 .swiper3 {
     width: 100%;
     height: 100%;
@@ -846,13 +854,41 @@
 
 
     /* ======> SOLICITAR INFO */
-    .solicitar-info {
-        height: 100rem;
+
+    .solicitar-info-contenedor {
+        background-color: var(--colorPrimarioSoft);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80rem;
     }
 
-    .s_i-imagen {
-        aspect-ratio: 10/5;
+    .solicitar-info {
+        background-color: var(--blanco);
+        flex-direction: row;
+        height: 60rem;
+        width: min(100%, 110rem);
+        /* border-radius: .8rem; */
+        border: .2rem solid var(--colorPrimario); 
+        overflow: hidden;
     }
+
+    /* .swiper5-contenedor {
+        flex: 1;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .formulario-contenedor {
+        flex: 1;
+    } */
+/*     .solicitar-info .swiper5 {
+    }
+
+    .solicitar-info .formulario {
+        max-width: 36rem;
+    } */
+
 }
 
 @media (min-width: 1300px) {

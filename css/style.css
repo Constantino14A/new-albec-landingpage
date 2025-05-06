@@ -23,6 +23,7 @@
     --colorPrimarioSoft: #94B4C1; /* seleccionada: color-hunt */
     --colorSecundario: #fbb12f;
     --colorSecundario2: #ec9b0f; 
+    --colorSecundario3: #DDA853; /* seleccionado: color-hunt */
     --colorSecundarioSoft: #ECEFCA; /* seleccionada: color-hunt */
     --crema: #FBF5DD;
 }
@@ -461,10 +462,10 @@ body {
     /* layout */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.4rem;
     justify-content: center;
     align-items: center;
-    padding: 4rem 3rem 4rem;
+    padding: 3.2rem;
     margin: 0 auto;
     height: fit-content;
     width: min(100%, 40rem);
@@ -474,13 +475,12 @@ body {
     font-size: 1.9rem;
     font-family: var(--fuentePrincipal);
     font-weight: bolder;
-    text-transform: uppercase;
     text-align: center;
 }
 
 
 .formulario .formulario__campo:nth-of-type(1) {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .formulario__campo {
@@ -491,16 +491,22 @@ body {
 }
 
 .formulario .formulario__campo span {
+    /* line-height: 2; */
+    font-size: 1.4rem;
     font-weight: 500;
+    margin-bottom: .8rem;
 }
 
 .formulario__campo input {
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
 }
 
 .formulario__input {
     /* input generico de formulario */
-    padding: .8rem 1rem;
+    background-color: var(--grisBgText);
+    font-family: var(--fuentePrincipal);
+    line-height: 2rem;
+    padding: 1rem;
     border-radius: .8rem;
     border: .1rem solid var(--grisBorder);
 }
@@ -520,12 +526,14 @@ body {
     font-family: var(--fuentePrincipal);
     background-color: var(--negro);
     color: var(--blanco);
+    font-size: 1.4rem;
     font-weight: bold;
-    border-radius: .4rem;
+    line-height: 20px;
+    /* border-radius: .4rem; */
+    border-radius: .8rem;
     border: none;
 
-    margin-top: 4rem;
-    padding: 1.6rem 1rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     width: 100%;
 }
@@ -535,7 +543,6 @@ body {
 
 .footer {
     background-color: var(--colorPrimario2);
-    margin-top: 4rem;
 }
 
 .footer_contenido {
@@ -860,7 +867,7 @@ body {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
     .contenedor {
         width: min(95%, 120rem);
     }
@@ -964,10 +971,7 @@ body {
         padding: 3rem;
         width: 100%;
     }
-
-    .formulario__campo:nth-of-type(1) {
-        margin-top: 2rem;
-    }
+    
 }
 
 @media (min-width: 1300px) {

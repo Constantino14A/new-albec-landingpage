@@ -194,13 +194,14 @@
           </div> <!-- FIN: TESTIMONIOS CONTENIDO -->
 
           <div class="banner-2">
-            <img src="./src/img/bg/index/albec-globos-azules.webp" alt="Imagen de globos metálicos con las letras de ALBEC">
+            <img src="./src/img/bg/index/albec-globos-azules.webp"
+              alt="Imagen de globos metálicos con las letras de ALBEC">
             <p class="banner-texto">Acá va información sobre clientes</p>
           </div> <!-- FIN: TESTIMNIOS: BANNER 2 -->
 
           <div class="testimonios-video">
             <video id="video-clientes" autoplay muted loop playsinline preload="none">
-              <source src="video_720_optimizado.mp4" type="video/mp4">
+              <source src="./src/video/video_720_optimizado.mp4" type="video/mp4">
             </video>
 
             <div class="video-controles">
@@ -209,7 +210,7 @@
               <!-- Botones de sonido -->
               <button id="mute-toggle"></button>
             </div> <!-- FIN: VIDEO CONTROLES -->
-            
+
           </div> <!-- FIN: TESTIMONIOS VIDEO -->
 
 
@@ -360,7 +361,7 @@
                 </div>
               </div>
 
-            </div>
+            </div> <!-- FIN: SWIPER WRAPPER -->
             <div class="swiper-pagination swiper3-pagination"></div>
           </div> <!-- FIN: SWIPER 3 -->
 
@@ -369,52 +370,78 @@
 
       </section> <!-- FIN: ASESORES -->
 
-      <section class="solicitar-info">
 
-        <div class="s_i-imagen"></div>
-        <div class="s_i-colorbg">
-        </div>
+      <div class="solicitar-info-contenedor">
+        
+        <section class="solicitar-info">
+          
+          
+            <div class="swiper swiper5">
+              <div class="swiper-wrapper">
+      
+                <div class="swiper-slide">
+                  <img src="./src/img/carousel/swiper4/diamante_punta-sal.jpg" alt="flayer de proyecto Diamante de Punta Sal">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/carousel/swiper4/palmo_dorado.jpg" alt="flayer de proyecto Palmo Dorado">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/carousel/swiper4/diamante_morrope.png" alt="flayer de proyecto Diamante de Mórrope">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/carousel/swiper4/villa_real.png" alt="flayer de proyecto Villa Real">
+                </div>
+      
+              </div> <!-- FIN: SWIPER WRAPPER -->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination swiper5-pagination"></div>
+      
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev swiper5-prev"></div>
+              <div class="swiper-button-next swiper5-next"></div>
+            </div> <!-- FIN: SWIPER 5 -->
+          
+    
+          
+            <form action="" class="formulario">
+              <p class="formulario__titulo">Solicitar Información</p>
+      
+              <label class="formulario__campo" for="nombre">
+                <span>Nombres y Apellidos*</span>
+                <input class="formulario__input" id="nombre" type="text" placeholder="Nombres Apellidos">
+              </label>
+      
+              <label class="formulario__campo" for="apellido">
+                <span>DNI*</span>
+                <input class="formulario__input" id="apellido" type="tel" placeholder="12345678"
+                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8">
+              </label>
+      
+              <label class="formulario__campo" for="correo">
+                <span>Correo</span>
+                <input class="formulario__input" id="correo" type="email" placeholder="tu_correo@mail.com">
+              </label>
+      
+              <label class="formulario__campo" for="celular">
+                <span>Celular</span>
+                <input class="formulario__input" id="celular" type="tel"
+                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="999 999 999">
+              </label>
+      
+              <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
+                  href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
+                  href="https://www.albec.com.pe/politicas-medioambientales/">políticas de protección de
+                  datos</a>.
+              </p>
+              <input class="formulario__input--submit" type="submit" value="Solicitar información">
+            </form> <!-- FIN: FORMULARIO -->
+          
+          
+        </section> <!-- FIN: SOLICITAR INFO -->
 
-        <div class="s_i-contenido contenedor">
+      </div> <!-- FIN: SOLICITAR INFO CONTENEDOR -->
 
-          <p class="s_i-titulo">Comunícate con nosotros</p>
 
-          <form action="" class="s_i-formulario">
-            <p class="formulario__titulo">Solicitar Información</p>
-
-            <label class="formulario__campo" for="nombre">
-              <span>Nombres y Apellidos*</span>
-              <input class="formulario__input" id="nombre" type="text" placeholder="">
-            </label>
-
-            <label class="formulario__campo" for="apellido">
-              <span>DNI*</span>
-              <input class="formulario__input" id="apellido" type="tel" placeholder=""
-                oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8">
-            </label>
-
-            <label class="formulario__campo" for="correo">
-              <span>Correo</span>
-              <input class="formulario__input" id="correo" type="email" placeholder="">
-            </label>
-
-            <label class="formulario__campo" for="celular">
-              <span>Celular</span>
-              <input class="formulario__input" id="celular" type="tel"
-                oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9">
-            </label>
-
-            <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
-                href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
-                href="https://www.albec.com.pe/politicas-medioambientales/">políticas de protección de
-                datos</a>.
-            </p>
-            <input class="formulario__input--submit" type="submit" value="Solicitar información">
-          </form> <!-- FIN: FORMULARIO -->
-
-        </div> <!-- FIN: SOLICITAR INFORMACION CONTENIDO -->
-
-      </section> <!-- FIN: SOLICITAR INFORMACION -->
 
     </main>
 

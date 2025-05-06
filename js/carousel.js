@@ -38,7 +38,7 @@ var swiper3 = new Swiper('.swiper3', {
   loop: true,
   /* loopFillGroupWithBlank: true, */
   autoplay: {
-    delay: 5000,  
+    delay: 5000,
     disableOnInteraction: false,
   },
 
@@ -72,9 +72,33 @@ var swiper4 = new Swiper(".swiperTestimonios", {
   effect: "cards",
   grabCursor: true,
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiperTestimonio-next',
-      prevEl: '.swiperTestimonio-prev',
-    },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiperTestimonio-next',
+    prevEl: '.swiperTestimonio-prev',
+  },
+});
+
+// swiper 4 (swiper de flayers junto con formulario de contacto en el index)
+
+const swiper5 = new Swiper('.swiper5', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper5-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper5-next',
+    prevEl: '.swiper5-prev',
+  },
 });
