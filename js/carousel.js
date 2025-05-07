@@ -34,13 +34,14 @@ const swiper2 = new Swiper('.swiper2', {
   },
 });
 
+// swiper 4 (asesores)
 var swiper3 = new Swiper('.swiper3', {
   loop: true,
   /* loopFillGroupWithBlank: true, */
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
 
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -68,6 +69,7 @@ var swiper3 = new Swiper('.swiper3', {
   },
 });
 
+// swiper 4 (testimonios)
 var swiper4 = new Swiper(".swiperTestimonios", {
   effect: "cards",
   grabCursor: true,
@@ -79,8 +81,7 @@ var swiper4 = new Swiper(".swiperTestimonios", {
   },
 });
 
-// swiper 4 (swiper de flayers junto con formulario de contacto en el index)
-
+// swiper 5 (swiper de flayers junto con formulario de contacto en el index)
 const swiper5 = new Swiper('.swiper5', {
   // Optional parameters
   direction: 'horizontal',

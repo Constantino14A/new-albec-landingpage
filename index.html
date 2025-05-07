@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALBEC</title>
+  
   <!-- PARALLEX SCROLL -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
@@ -407,25 +408,25 @@
               <p class="formulario__titulo">Solicitar Información</p>
       
               <label class="formulario__campo" for="nombre">
-                <span>Nombres y Apellidos*</span>
-                <input class="formulario__input" id="nombre" type="text" placeholder="Nombres Apellidos">
+                  
+                <input class="formulario__input" id="nombre" type="text" placeholder="Nombres y apellidos*" required>
               </label>
       
               <label class="formulario__campo" for="apellido">
-                <span>DNI*</span>
-                <input class="formulario__input" id="apellido" type="tel" placeholder="12345678"
-                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8">
+                
+                <input class="formulario__input" id="apellido" type="tel" placeholder="DNI*"
+                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8" required>
               </label>
       
               <label class="formulario__campo" for="correo">
-                <span>Correo</span>
-                <input class="formulario__input" id="correo" type="email" placeholder="tu_correo@mail.com">
+                
+                <input class="formulario__input" id="correo" type="email" placeholder="Correo electrónico">
               </label>
       
               <label class="formulario__campo" for="celular">
-                <span>Celular</span>
+                
                 <input class="formulario__input" id="celular" type="tel"
-                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="999 999 999">
+                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="Celular">
               </label>
       
               <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
@@ -486,9 +487,6 @@
       </div>
 
     </footer> <!-- FIN: FOOTER -->
-
-    <p>Ir a Palmo<a href="palmo.html">palmo.html</a>...</p>
-
 
   </div> <!-- FIN: DATA SCROLL CONTAINER -->
 

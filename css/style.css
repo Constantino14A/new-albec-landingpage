@@ -3,13 +3,13 @@
     --gris: #777777;
     --grisClaro: #e8e8e8;
     --grisClaro2: #f1f1f1;
-    --grisBorder: #e5e7eb; /* seleccionado */
+    --grisBorder: #e5e7eb; /* seleccionado: tailwind*/
     --grisBorderHigh: #a3a3a3aa;
-    --grisText: #6b7280; /* seleccionado */
-    --grisTextMenu: #374151; /* seleccionado */
-    --grisBgText: #f9fafb; /* seleccionado */
-    --grisBgFocus: #f3f4f6; /* seleccionado */
-    --grisShadow: #0000001a; /* seleccionado */
+    --grisText: #6b7280; /* seleccionado: tailwind*/
+    --grisTextMenu: #374151; /* seleccionado: tailwind*/
+    --grisBgText: #f9fafb; /* seleccionado: tailwind*/
+    --grisBgFocus: #f3f4f6; /* seleccionado: tailwind*/
+    --grisShadow: #0000001a; /* seleccionado:: tailwind*/
     --negro: #000;
     --negroLight: #11181d;
     --negroAlpha: #00000080;
@@ -26,6 +26,10 @@
     --colorSecundario3: #DDA853; /* seleccionado: color-hunt */
     --colorSecundarioSoft: #ECEFCA; /* seleccionada: color-hunt */
     --crema: #FBF5DD;
+    --crema2: #F6F1DE; /* seleccionado: color-hunt */
+    --rojo2: #BB3E00; /* seleccionado: color-hunt */
+    --salmon: #e91e63; /* seleccionado: chrome-default */
+
 }
 
 html {
