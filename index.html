@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALBEC</title>
-  
+
   <!-- PARALLEX SCROLL -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
@@ -222,7 +222,11 @@
       <section class="asesores">
 
         <div class="asesores__contenido">
-          <p class="asesores__titulo">Asesores<br>Inmobiliarios</p>
+
+          <div class="asesores__texto">
+            <p class="asesores__titulo">Asesores<br>Inmobiliarios</p>
+          </div> <!-- FIN: ASESORES TEXTO -->
+          <p class="asesores__informacion">¿Tienes dudas? Comunícate directamente con uno de nuestros asesores ⬇️</p>
 
           <div class="swiper swiper3">
             <div class="swiper-wrapper">
@@ -373,71 +377,68 @@
 
 
       <div class="solicitar-info-contenedor">
-        
+
         <section class="solicitar-info">
           
-          
-            <div class="swiper swiper5">
-              <div class="swiper-wrapper">
-      
-                <div class="swiper-slide">
-                  <img src="./src/img/carousel/swiper4/diamante_punta-sal.jpg" alt="flayer de proyecto Diamante de Punta Sal">
-                </div>
-                <div class="swiper-slide">
-                  <img src="./src/img/carousel/swiper4/palmo_dorado.jpg" alt="flayer de proyecto Palmo Dorado">
-                </div>
-                <div class="swiper-slide">
-                  <img src="./src/img/carousel/swiper4/diamante_morrope.png" alt="flayer de proyecto Diamante de Mórrope">
-                </div>
-                <div class="swiper-slide">
-                  <img src="./src/img/carousel/swiper4/villa_real.png" alt="flayer de proyecto Villa Real">
-                </div>
-      
-              </div> <!-- FIN: SWIPER WRAPPER -->
-              <!-- If we need pagination -->
-              <div class="swiper-pagination swiper5-pagination"></div>
-      
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev swiper5-prev"></div>
-              <div class="swiper-button-next swiper5-next"></div>
-            </div> <!-- FIN: SWIPER 5 -->
-          
-    
-          
-            <form action="" class="formulario">
-              <p class="formulario__titulo">Solicitar Información</p>
-      
-              <label class="formulario__campo" for="nombre">
-                  
-                <input class="formulario__input" id="nombre" type="text" placeholder="Nombres y apellidos*" required>
-              </label>
-      
-              <label class="formulario__campo" for="apellido">
-                
-                <input class="formulario__input" id="apellido" type="tel" placeholder="DNI*"
-                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8" required>
-              </label>
-      
-              <label class="formulario__campo" for="correo">
-                
-                <input class="formulario__input" id="correo" type="email" placeholder="Correo electrónico">
-              </label>
-      
-              <label class="formulario__campo" for="celular">
-                
-                <input class="formulario__input" id="celular" type="tel"
-                  oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="Celular">
-              </label>
-      
-              <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
-                  href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
-                  href="https://www.albec.com.pe/politicas-medioambientales/">políticas de protección de
-                  datos</a>.
-              </p>
-              <input class="formulario__input--submit" type="submit" value="Solicitar información">
-            </form> <!-- FIN: FORMULARIO -->
-          
-          
+          <div class="swiper swiper5">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="./src/img/carousel/swiper4/diamante_punta-sal.jpg"
+                  alt="flayer de proyecto Diamante de Punta Sal">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/carousel/swiper4/palmo_dorado.jpg" alt="flayer de proyecto Palmo Dorado">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/carousel/swiper4/diamante_morrope.png" alt="flayer de proyecto Diamante de Mórrope">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/carousel/swiper4/villa_real.png" alt="flayer de proyecto Villa Real">
+              </div>
+
+            </div> <!-- FIN: SWIPER WRAPPER -->
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper5-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper5-prev"></div>
+            <div class="swiper-button-next swiper5-next"></div>
+          </div> <!-- FIN: SWIPER 5 -->
+
+          <form action="" class="formulario">
+            <p class="formulario__titulo">Solicitar Información</p>
+
+            <label class="formulario__campo" for="nombre">
+
+              <input class="formulario__input" id="nombre" type="text" placeholder="Nombres y apellidos*" required>
+            </label>
+
+            <label class="formulario__campo" for="apellido">
+
+              <input class="formulario__input" id="apellido" type="tel" placeholder="DNI*"
+                oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8" required>
+            </label>
+
+            <label class="formulario__campo" for="correo">
+
+              <input class="formulario__input" id="correo" type="email" placeholder="Correo electrónico">
+            </label>
+
+            <label class="formulario__campo" for="celular">
+
+              <input class="formulario__input" id="celular" type="tel"
+                oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="Celular">
+            </label>
+
+            <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
+                href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
+                href="https://www.albec.com.pe/politicas-medioambientales/">políticas de protección de
+                datos</a>.
+            </p>
+            <input class="formulario__input--submit" type="submit" value="Solicitar información">
+          </form> <!-- FIN: FORMULARIO -->
+
         </section> <!-- FIN: SOLICITAR INFO -->
 
       </div> <!-- FIN: SOLICITAR INFO CONTENEDOR -->
