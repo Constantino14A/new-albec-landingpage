@@ -38,10 +38,10 @@ const swiper2 = new Swiper('.swiper2', {
 var swiper3 = new Swiper('.swiper3', {
   loop: true,
   /* loopFillGroupWithBlank: true, */
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   slidesPerView: 1,
   slidesPerGroup: 1,

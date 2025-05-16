@@ -3,13 +3,19 @@
     --gris: #777777;
     --grisClaro: #e8e8e8;
     --grisClaro2: #f1f1f1;
-    --grisBorder: #e5e7eb; /* seleccionado: tailwind*/
+    --grisBorder: #e5e7eb;
+    /* seleccionado: tailwind*/
     --grisBorderHigh: #a3a3a3aa;
-    --grisText: #6b7280; /* seleccionado: tailwind*/
-    --grisTextMenu: #374151; /* seleccionado: tailwind*/
-    --grisBgText: #f9fafb; /* seleccionado: tailwind*/
-    --grisBgFocus: #f3f4f6; /* seleccionado: tailwind*/
-    --grisShadow: #0000001a; /* seleccionado:: tailwind*/
+    --grisText: #6b7280;
+    /* seleccionado: tailwind*/
+    --grisTextMenu: #374151;
+    /* seleccionado: tailwind*/
+    --grisBgText: #f9fafb;
+    /* seleccionado: tailwind*/
+    --grisBgFocus: #f3f4f6;
+    /* seleccionado: tailwind*/
+    --grisShadow: #0000001a;
+    /* seleccionado:: tailwind*/
     --negro: #000;
     --negroLight: #11181d;
     --negroAlpha: #00000080;
@@ -20,19 +26,29 @@
     --colorPrimarioAlpha: #00315670;
     --colorPrimario2: #055f91;
     --colorPrimario3: #02a5b4;
-    --colorPrimarioSoft: #94B4C1; /* seleccionada: color-hunt */
+    --colorPrimarioSoft: #94B4C1;
+    /* seleccionada: color-hunt */
     --colorSecundario: #fbb12f;
-    --colorSecundario2: #ec9b0f; 
-    --colorSecundario3: #DDA853; /* seleccionado: color-hunt */
-    --colorSecundarioSoft: #ECEFCA; /* seleccionada: color-hunt */
-    --amarillo: #FFD63A; /* seleccionada: color-hunt */
-    --celeste: #6DE1D2; /* seleccionada: color-hunt */
+    --colorSecundario2: #ec9b0f;
+    --colorSecundario3: #DDA853;
+    /* seleccionado: color-hunt */
+    --colorSecundarioSoft: #ECEFCA;
+    /* seleccionada: color-hunt */
+    --amarillo: #FFD63A;
+    /* seleccionada: color-hunt */
+    --celeste: #6DE1D2;
+    /* seleccionada: color-hunt */
     --crema: #FBF5DD;
-    --crema2: #F6F1DE; /* seleccionado: color-hunt */
-    --crema3: #EAE2C6; /* seleccionado: color-hunt */
-    --cremaOscuro: #BFBBA9; /* seleccionado: color-hunt */
-    --rojo2: #BB3E00; /* seleccionado: color-hunt */
-    --salmon: #e91e63; /* seleccionado: chrome-default */
+    --crema2: #F6F1DE;
+    /* seleccionado: color-hunt */
+    --crema3: #EAE2C6;
+    /* seleccionado: color-hunt */
+    --cremaOscuro: #BFBBA9;
+    /* seleccionado: color-hunt */
+    --rojo2: #BB3E00;
+    /* seleccionado: color-hunt */
+    --salmon: #e91e63;
+    /* seleccionado: chrome-default */
 
 }
 
@@ -52,16 +68,13 @@ html {
     padding: 0;
 }
 
+main {
+    margin-top: 7rem;
+}
+
 body {
     max-width: 100vw;
     font-size: 1.6rem;
-}
-
-
-/* ((MAIN)) */
-
-.main {
-    padding-top: 6rem;
 }
 
 /* ((MUESTRA)) */
@@ -666,29 +679,59 @@ body {
 /* ((REUTILIZABLES)) */
 
 .header {
-    background-color: var(--blanco);
-    background-image: url(../src/img/textures/diagonal-noise.png);
-    width: 100%;
+    background-color: var(--colorPrimario2);
+    /* background-image: url(../src/img/textures/diagonal-noise.png); */
+    width: min(100%, 98rem);
     position: fixed;
     z-index: 1000;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .navbar {
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
-    height: 6.4rem;
+    height: 7rem;
 
-    margin: 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 3.2rem;
 }
 
 .navbar__logo {
     display: flex;
     align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+}
+
+.navbar__logo img {
+    max-height: 5rem;
+}
+
+.navbar__logo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3rem;
+    height: 5rem;
+}
+
+.navbar__logo div p {
+    color: var(--blanco);
+
+}
+
+.navbar__logo div p:nth-of-type(1) {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.navbar__logo div p:nth-of-type(2) {
+    /* display: none; */
+    font-weight: 500;
 }
 
 .navbar_menu-button {
@@ -758,27 +801,30 @@ body {
 }
 
 .navbar__enlace {
-    background-color: var(--blanco);
-    font-weight: 600;
+    /* background-color: var(--blanco); */
+    font-weight: 400;
     text-decoration: none;
-    color: var(--negro);
-    padding: .7rem 1.5rem;
-    border-radius: 4rem;
-    border: .1rem solid var(--grisBorder);
-    transition: background .2s ease, color .2s ease, transform .2s ease;
+    /* color: var(--negro); */
+    color: var(--blanco);
+    padding: .7rem .5rem;
+    /* border-radius: 4rem; */
+    /* border: .1rem solid var(--grisBorder); */
+    /* transition: background .2s ease, color .2s ease, transform .2s ease; */
+    transition: color .2s ease, transform .2s ease;
 }
 
 .navbar__enlace:hover {
-    transform: scaleX(1.1) scaleY(1.1);
-    color: var(--blanco);
-    background: var(--colorPrimario)
+    color: var(--colorSecundario);
+    /* transform: scaleX(1.1) scaleY(1.1); */
+    /* color: var(--blanco); */
+    /* background: var(--colorPrimario) */
 }
 
 .navbar__enlace--contacto {
     display: none;
 }
 
-.navbar__enlace--colorbutton {
+/* .navbar__enlace--colorbutton {
     color: var(--blanco);
     font-size: 1.3rem;
     font-style: italic;
@@ -789,12 +835,12 @@ body {
     border-radius: 5rem;
     padding: 1rem;
     transition: background-color .3s ease;
-}
-
+} */
+/* 
 .navbar__a--colorbutton:hover {
     background-color: var(--gris);
     color: var(--blanco);
-}
+} */
 
 .separador {
     width: 100%;
@@ -842,9 +888,21 @@ body {
     .conoce__elemento {
         padding: 3rem;
     }
+
+    /* ((NAVBAR)) */
+
+    .navbar {
+        height: 10.3rem;
+    }
+
+
 }
 
 @media (min-width: 900px) {
+
+    .main {
+        margin-top: 0;
+    }
 
     .footer_enlaces {
         display: block;
@@ -873,6 +931,8 @@ body {
     .footer_informacion-bottom {
         grid-column: 1 / 4;
     }
+
+
 }
 
 @media (min-width: 1025px) {
@@ -898,6 +958,7 @@ body {
     }
 
     /* ((MUESTRA)) */
+
     .muestra {
         /* layout */
         position: relative;
@@ -979,7 +1040,7 @@ body {
         padding: 3rem;
         width: 100%;
     }
-    
+
 }
 
 @media (min-width: 1300px) {
@@ -988,6 +1049,23 @@ body {
         gap: 2rem;
     }
 }
+
+@media (min-width: 1500px) {
+    .header {
+        width: 120rem;
+    }
+
+    .proyectos {
+        width: 130rem;
+    }
+
+
+    .proyectos-grid {
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+    }
+}
+
 
 /* ((MEDIA QUERYS WITH ASPECT RATIO)) */
 
