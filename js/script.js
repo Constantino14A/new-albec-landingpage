@@ -62,3 +62,42 @@ document.addEventListener("DOMContentLoaded", function () {
   updateVolumeUI();
 
 });
+
+/* SCRIPTS */
+
+// definir umbrales de scroll por tamaños de pantalla
+let umbralScroll = 0;
+
+function actualizarUmbral() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    umbralScroll = 285; // móviles
+  } else if (window.matchMedia("(max-width: 1024px)").matches) {
+    umbralScroll = 450; // tablets
+  } else {
+    umbralScroll = 400; // desktops
+  }
+}
+
+// llamada cada que se actualiza el ancho
+actualizarUmbral();
+window.addEventListener('resize', actualizarUmbral);
+
+// para desvanecimiento de header
+const header = document.querySelector('.header');
+// definir último scroll
+let ultimoScroll = window.scrollY;
+window.addEventListener('scroll', () => {
+  const actualScroll = window.scrollY;
+
+  if (actualScroll > umbralScroll) {
+    if (actualScroll > ultimoScroll) {
+      header.classList.add('ocultar-header');
+    } else {
+      header.classList.remove('ocultar-header');
+    }
+  }
+
+
+
+  ultimoScroll = actualScroll;
+});

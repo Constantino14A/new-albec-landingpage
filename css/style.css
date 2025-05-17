@@ -69,7 +69,8 @@ html {
 }
 
 main {
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
+    z-index: 2;
 }
 
 body {
@@ -687,6 +688,14 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    /* transition: opacity .3s ease, top .7s ease; */
+    visibility: visible;
+    transition: opacity .3s ease, visibility .3s ease; 
+}
+
+.ocultar-header {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .navbar {
@@ -868,6 +877,10 @@ body {
 
 
 @media (min-width: 768px) {
+    main {
+        /* margin-top: 10.3rem; */
+    }
+
     .navbar_menu-button {
         order: 3;
     }
@@ -899,7 +912,6 @@ body {
 }
 
 @media (min-width: 900px) {
-
     .main {
         margin-top: 0;
     }
@@ -1057,12 +1069,6 @@ body {
 
     .proyectos {
         width: 130rem;
-    }
-
-
-    .proyectos-grid {
-        grid-template-columns: repeat(4, 1fr);
-        width: 80%;
     }
 }
 
