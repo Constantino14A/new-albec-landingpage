@@ -115,3 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Requiere interacción para reproducir el video.');
   });
 });
+
+// para animaciones con AOS
+AOS.init();
