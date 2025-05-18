@@ -33,27 +33,32 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="./index.html" class="navbar__logo">
-                <img src="./src/img/logo_albec_horizontal.png" alt="Logo de ALBEC" height="48px">
-            </a>
-            <label class="navbar_menu-button">
-                <input type="checkbox" class="button-checkbox">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <ul class="navbar__enlaces">
-                <a class="navbar__enlace" href="./index.html">Inicio</a>
-                <a class="navbar__enlace" href="#">Proyectos</a>
-                <a class="navbar__enlace" href="#">Referidos</a>
-                <a class="navbar__enlace" href="#">Conócenos</a>
-                <a class="navbar__enlace" href="#">Intranet</a>
-            </ul>
-            <a class="navbar__enlace--contacto navbar__enlace navbar__a--colorbutton" href="#">Contáctanos</a>
-        </nav>
-    </header>
+    
+  <header class="header">
+    <nav class="navbar">
+      <a href="./index.html" class="navbar__logo">
+        <img src="./src/img/logo_albec_icon_blanco.webp" alt="Logo de ALBEC">
+        <div>
+          <p>ALBEC</p>
+          <p>PROYECTOS PARA LA VIDA</p>
+        </div>
+      </a>
+      <label class="navbar_menu-button">
+        <input type="checkbox" class="button-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar__enlaces">
+        <a class="navbar__enlace" href="#">Inicio</a>
+        <a class="navbar__enlace" href="#">Proyectos</a>
+        <a class="navbar__enlace" href="#">Referidos</a>
+        <a class="navbar__enlace" href="#">Conócenos</a>
+        <a class="navbar__enlace" href="#">Intranet</a>
+        <a class="navbar__enlace--contacto navbar__enlace" href="#">Contáctanos</a>
+      </ul>
+    </nav>
+  </header> <!-- FIN: HEADER -->
 
     <main class="main">
 
@@ -98,28 +103,6 @@
                         de prestigio, servicios médicos y vías principales como la Panamericana Norte,
                         garantizando acceso rápido a toda la región.
                     </p>
-                    <!--                 <p>
-                        Diseñado para quienes buscan <b>calidad de vida y rentabilidad</b>, cuenta con
-                        <b>áreas comunes diseñadas para el bienestar:</b> zonas verdes ideales para
-                        recreación, futuras áreas de juegos infantiles y espacios multifuncionales listos
-                        para personalizar. Adicionalmente, ofrece <b>seguridad 24/7 con control de acceso y
-                            cámaras de vigilancia</b>, brindando tranquilidad a residentes e
-                        inversionistas.
-                    </p>
-    
-                    <p>
-                        <b>Disponibilidad inmediata</b> para que inicies la construcción de tu vivienda o
-                        proyecto comercial, adaptándolo a tus necesidades. Con una <b>demanda en ascenso en
-                            la zona </b>debido al desarrollo de infraestructura y planes urbanísticos, esta
-                        oportunidad representa una <b>inversión sólida con proyección de revalorización a
-                            corto y mediano plazo.
-                    </p>
-    
-                    <p>
-                        Ideal para familias que buscan un entorno tranquilo o inversionistas ávidos de
-                        <b>rendimientos atractivos en un mercado en expansión.</b> ¡Aprovecha hoy y sé parte
-                        del crecimiento estratégico de Ferreñafe!
-                    </p> -->
                 </section> <!-- [1.1]  FIN: INFORMACION ENTRADA -->
 
                 <section class="informacion__top">
@@ -352,24 +335,17 @@
 
             <div class="informacion__derecha">
 
-                <form class="formulario tarjeta-grid">
+                <form class="formulario">
                     <p class="formulario__titulo">Completa el formulario y nosotros te contactaremos</p>
                     <label class="formulario__campo" for="nombre">
-                        <span>Nombres</span>
-                        <input class="formulario__input" id="nombre" type="text" placeholder="Tus Nombres">
-                    </label>
-                    <label class="formulario__campo" for="apellido">
-                        <span>Apellidos</span>
-                        <input class="formulario__input" id="apellido" type="text" placeholder="Tus Apellidos">
+                        <input class="formulario__input" id="nombre" type="text" placeholder="Nombres y Apellidos">
                     </label>
                     <label class="formulario__campo" for="correo">
-                        <span>Correo</span>
-                        <input class="formulario__input" id="correo" type="email" placeholder="m@ejemplo.com">
+                        <input class="formulario__input" id="correo" type="email" placeholder="Correo Electrónico">
                     </label>
                     <label class="formulario__campo" for="celular">
-                        <span>Celular</span>
                         <input class="formulario__input" id="celular" type="tel"
-                            oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9">
+                            oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="Celular">
                     </label>
                     <p class="formulario__informacion">Al enviar este formulario estás aceptando nuestros <a
                             href="https://www.albec.com.pe/terminos-y-condiciones/">términos y condiciones</a> y las <a
@@ -429,6 +405,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

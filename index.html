@@ -26,11 +26,15 @@
   <!-- SWIPER JS(CARRUSEL) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- PLYR (BOTONES DE VIDEO) -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
   <!-- MAIN STYLE.CSS -->
   <link rel="preload" href="./css/index-style.css" as="style">
   <link rel="stylesheet" href="./css/index-style.css">
   <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
+
 
 
   <!-- <meta http-equiv="refresh" content="0; url=palmo.html" /> -->
@@ -113,7 +117,7 @@
             <p class="">en Tumbes</p>
             <a class="enlace-basico" href="#">Explora el proyecto</a>
           </div> <!-- FIN: PROYECTO -->
-        </div> <!-- FIN: PROYECTOS -->  
+        </div> <!-- FIN: PROYECTOS -->
     </div>
 
 
@@ -248,16 +252,18 @@
         </div> <!-- FIN: TESTIMNIOS: BANNER 2 -->
 
         <div class="testimonios-video">
-          <video id="video-clientes" autoplay muted loop playsinline preload="none">
+          <!-- <video id="video-clientes" autoplay muted loop playsinline preload="none">
             <source src="./src/video/video_720_optimizado.mp4" type="video/mp4">
+          </video> -->
+          <video id="video-clientes" class="js-player" autoplay muted loop playsinline preload="none">
+            <source src="./src/video/video_720_optimizado.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta video.
           </video>
 
-          <div class="video-controles">
-            <!-- Barra de volumen transformada en slider -->
+          <!-- <div class="video-controles">
             <input type="range" id="volumen-range" min="0" max="100" value="0" class="level">
-            <!-- Botones de sonido -->
             <button id="mute-toggle"></button>
-          </div> <!-- FIN: VIDEO CONTROLES -->
+          </div>  -->
 
         </div> <!-- FIN: TESTIMONIOS VIDEO -->
 
@@ -458,23 +464,19 @@
           <p class="formulario__titulo">Solicitar Información</p>
 
           <label class="formulario__campo" for="nombre">
-
             <input class="formulario__input" id="nombre" type="text" placeholder="Nombres y apellidos*" required>
           </label>
 
           <label class="formulario__campo" for="apellido">
-
             <input class="formulario__input" id="apellido" type="tel" placeholder="DNI*"
               oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="8" required>
           </label>
 
           <label class="formulario__campo" for="correo">
-
             <input class="formulario__input" id="correo" type="email" placeholder="Correo electrónico">
           </label>
 
           <label class="formulario__campo" for="celular">
-
             <input class="formulario__input" id="celular" type="tel"
               oninput="this.value = this.value.replace(/[^0-9]/g,'')" maxlength="9" placeholder="Celular">
           </label>
@@ -538,6 +540,7 @@
   </footer> <!-- FIN: FOOTER -->
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <script src="./js/carousel.js"></script>
   <script src="./js/script.js"></script>
 </body>
