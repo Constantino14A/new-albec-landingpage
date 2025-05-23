@@ -825,6 +825,7 @@ body {
     transform: translatey(70px);
     transition: clip-path .3s ease; 
 }*/
+
 .navbar__enlaces {
     list-style: none;
     background-color: var(--colorPrimario);
@@ -909,6 +910,11 @@ body {
     /* ((NAVBAR)) */
     .navbar {
         height: 10.3rem;
+    }
+
+    .navbar__enlaces {
+        height: calc(100vh - 103px);
+        transform: translateY(103px);
     }
 }
 

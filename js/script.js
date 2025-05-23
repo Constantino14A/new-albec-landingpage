@@ -89,6 +89,8 @@ let ultimoScroll = window.scrollY;
 window.addEventListener('scroll', () => {
   const actualScroll = window.scrollY;
 
+  if (checkbox.checked) return;
+
   if (actualScroll > umbralScroll) {
     if (actualScroll > ultimoScroll) {
       header.classList.add('ocultar-header');
