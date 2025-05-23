@@ -28,7 +28,7 @@
 
   <!-- PLYR (BOTONES DE VIDEO) -->
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  
+
   <!-- AOS (ANIMACIONES LIGERAS) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -55,21 +55,26 @@
         </div>
       </a>
       <label class="navbar_menu-button">
-        <input type="checkbox" class="button-checkbox">
+        <input type="checkbox" class="button-checkbox" id="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
       </label>
-      <ul class="navbar__enlaces">
+      <ul class="navbar__enlaces" id="menu-enlaces">
+        <li><a class="navbar__enlace" href="#">Inicio</a></li>
         <li>
-          <a class="navbar__enlace" href="#">Inicio</a>
-
+          <a class="navbar__enlace" href="#">Proyectos</a>
+          <ul class="navbar__enlace--menu">
+            <li><a class="navbar__enlace" href="./palmo.html">Palmo Dorado</a></li>
+            <li><a class="navbar__enlace" href="./#">Diamante de Punta Sal</a></li>
+            <li><a class="navbar__enlace" href="./#">Villa Real</a></li>
+            <li><a class="navbar__enlace" href="./#">Diamante de Mórrope</a></li>
+          </ul>
         </li>
-        <a class="navbar__enlace" href="#">Proyectos</a>
-        <a class="navbar__enlace" href="#">Referidos</a>
-        <a class="navbar__enlace" href="#">Conócenos</a>
-        <a class="navbar__enlace" href="#">Intranet</a>
-        <a class="navbar__enlace--contacto navbar__enlace" href="#">Contáctanos</a>
+        <li><a class="navbar__enlace" href="#">Referidos</a></li>
+        <li><a class="navbar__enlace" href="#">Conócenos</a></li>
+        <li><a class="navbar__enlace" href="#">Intranet</a></li>
+        <li><a class="navbar__enlace--contacto navbar__enlace" href="#">Contáctanos</a></li>
       </ul>
     </nav>
   </header> <!-- FIN: HEADER -->
@@ -285,7 +290,8 @@
         <div class="asesores__texto" data-aos="fade-up" data-aos-duration="1000">
           <p class="asesores__titulo">Asesores<br>Inmobiliarios</p>
         </div> <!-- FIN: ASESORES TEXTO -->
-        <p class="asesores__informacion" data-aos="fade-up" data-aos-duration="1200">¿Tienes dudas? Comunícate directamente con uno de nuestros asesores ⬇️</p>
+        <p class="asesores__informacion" data-aos="fade-up" data-aos-duration="1200">¿Tienes dudas? Comunícate
+          directamente con uno de nuestros asesores ⬇️</p>
 
         <div class="swiper swiper3">
           <div class="swiper-wrapper">

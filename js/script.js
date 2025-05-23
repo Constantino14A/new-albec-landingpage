@@ -118,3 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // para animaciones con AOS
 AOS.init();
+
+// para menu hamburguer
+const checkbox = document.querySelector('#menu-toggle');
+const enlaces = document.querySelector('#menu-enlaces');
+const enlace = document.querySelectorAll('.navbar__enlace');
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    enlaces.classList.add('navbar__enlaces--hamburguer');
+    enlace.classList.add('navbar__enlace--hamburguer');
+  } else {
+    enlaces.classList.remove('navbar__enlaces--hamburguer');
+    enlace.classList.remove('navbar__enlace--hamburguer');
+  }
+})

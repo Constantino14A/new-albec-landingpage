@@ -757,12 +757,6 @@
 
 .asesor__imagen {
     background-color: var(--cremaOscuro);
-    /* background-color: var(--cremaOscuro);
-    background-image:
-        url(../src/img/image.webp),
-        linear-gradient(var(--cremaOscuro), var(--cremaOscuro));
-    background-repeat: repeat, no-repeat;
-    background-size: 350px, cover; */
 
     overflow: hidden;
     aspect-ratio: 10/10;
