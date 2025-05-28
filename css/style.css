@@ -804,28 +804,6 @@ body {
     left: 5px;
 }
 
-/* .navbar__enlaces {
-    list-style: none;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    transition: clip-path .3s ease;
-}
-
-.navbar__enlaces--hamburguer {
-    background-color: var(--colorPrimario);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 70px);
-    transform: translatey(70px);
-    transition: clip-path .3s ease; 
-}*/
-
 .navbar__enlaces {
     list-style: none;
     background-color: var(--colorPrimario);
@@ -846,11 +824,11 @@ body {
 
 .navbar__enlaces--hamburguer {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding-top: 3rem;
 }
 
-.navbar__enlace--hamburguer {
-    line-height: 3;
-
+.navbar__enlaces--hamburguer li:nth-of-type(2) {
+    text-align: center;
 }
 
 .navbar__enlace {
@@ -860,6 +838,18 @@ body {
     padding: 0 .5rem;
     transition: color .2s ease, transform .2s ease;
 }
+
+.navbar__enlace--hamburguer {
+    
+    line-height: 1.5;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.navbar__enlace--menu {
+    list-style: none;
+}
+
 
 .navbar__enlace:hover {
     color: var(--colorSecundario);
