@@ -131,6 +131,6 @@ checkbox.addEventListener('change', () => {
     enlace.forEach(enlace => enlace.classList.add('navbar__enlace--hamburguer'))
   } else {
     enlaces.classList.remove('navbar__enlaces--hamburguer');
-    enlace.forEach(enlace => enlace.classList.remove('navbar__enlace--hamburguer'))
+    // enlace.forEach(enlace => enlace.classList.remove('navbar__enlace--hamburguer'))
   }
 })

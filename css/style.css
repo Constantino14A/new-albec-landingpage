@@ -819,16 +819,15 @@ body {
     height: calc(100vh - 70px);
     transform: translatey(70px);
     transition: clip-path .3s ease;
-
-}
-
-.navbar__enlaces--hamburguer {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding-top: 3rem;
 }
 
-.navbar__enlaces--hamburguer li:nth-of-type(2) {
-    text-align: center;
+.navbar__enlaces li:nth-of-type(2) {
+text-align: center;
+}
+.navbar__enlaces--hamburguer {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding-top: 3rem;
 }
 
 .navbar__enlace {
@@ -969,8 +968,9 @@ body {
         /* ajustar navbar__enlaces de menu burger */
         background-color: unset;
         clip-path: unset;
-        width: unset;
         transform: none;
+        padding-top: unset;
+        width: unset;
     }
 
     .navbar__enlaces>li {
