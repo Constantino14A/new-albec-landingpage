@@ -823,8 +823,9 @@ body {
 }
 
 .navbar__enlaces li:nth-of-type(2) {
-text-align: center;
+    text-align: center;
 }
+
 .navbar__enlaces--hamburguer {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding-top: 3rem;
@@ -839,7 +840,7 @@ text-align: center;
 }
 
 .navbar__enlace--hamburguer {
-    
+
     line-height: 1.5;
     display: inline-block;
     padding: 1rem;
