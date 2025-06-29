@@ -1,0 +1,214 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBEC</title>
+
+    <!-- FUENTE INTER(PRINCIPAL) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- FUENTE FRAUNCES(HEADING) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,50&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER JS(CARRUSEL) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- PLYR (BOTONES DE VIDEO) -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+    <!-- AOS (ANIMACIONES LIGERAS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- MAIN STYLE.CSS -->
+    <link rel="preload" href="./css/index-style.css" as="style">
+    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="navbar__logo">
+                <img src="./src/img/logo_albec_icon_blanco.webp" alt="Logo de ALBEC">
+                <div>
+                    <p>ALBEC</p>
+                    <p>INMOBILIARIA</p>
+                </div>
+            </a>
+            <label class="navbar_menu-button">
+                <input type="checkbox" class="button-checkbox" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="navbar__enlaces" id="menu-enlaces">
+                <li><a class="navbar__enlace" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="navbar__enlace" href="#">Proyectos</a>
+                    <ul class="navbar__enlace--menu">
+                        <li><a class="navbar__enlace" href="./palmo.html">Palmo Dorado</a></li>
+                        <li><a class="navbar__enlace" href="./diamante.html">Diamante de Punta Sal</a></li>
+                        <li><a class="navbar__enlace" href="./villa.html">Villa Real</a></li>
+                    </ul>
+                </li>
+                <li><a class="navbar__enlace" href="./sedes.html">Sedes</a></li>
+                <li><a class="navbar__enlace" href="./quienes-somos.html">¿Quienes somos?</a></li>
+                <li><a class="navbar__enlace" href="#">Intranet</a></li>
+                <li><a class="navbar__enlace--contacto navbar__enlace" href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header> <!-- FIN: HEADER -->
+    <main class="main">
+
+        <section class="presentacion-sedes">
+            <img class="presentacion-sedes-imagen" src="./src/img/sedes/sedes.jpg">
+
+            </img>
+        </section> <!-- FIN: PRESENTACION -->
+
+        <section class="seccion-sedes">
+            <div class="contenedor-sedes-header">
+                <div class="sedes__caja" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="sedes__titulo">Nuestras Sedes</p>
+                </div>
+                <p>
+                    Con presencia física en diversos puntos clave de la ciudad, nuestras sedes no solo representan
+                    cobertura territorial, sino también el compromiso constante con nuestros clientes. Cada una refleja
+                    la calidad, confianza y experiencia que nos caracteriza.
+                </p>
+                <p data-aos="flip-up" data-aos-duration="600"><b>Te invitamos a conocernos personalmente en cualquiera
+                        de nuestras ubicaciones.</b></p>
+            </div>
+
+            <div class="contenedor-sedes-body">
+                <!-- Sede 1 -->
+                <div class="sede">
+                    <img src="./src/img/sedes/chiclayo.webp" alt="Oficina Principal" class="imagen-sede">
+                    <div class="info-sede">
+                        <h3>Sede Central - Chiclayo</h3>
+                        <p>Colocar la ubicación</p>
+                        <p>Horario: Lunes a Viernes, 9:00 a.m. - 6:00 p.m.</p>
+                    </div>
+                </div>
+
+                <!-- Sede 2 -->
+                <div class="sede">
+                    <img src="./src/img/sedes/trujillo.webp" alt="Sucursal San Isidro" class="imagen-sede">
+                    <div class="info-sede">
+                        <h3>Sucursal Trujillo</h3>
+                        <p>Colocar la ubicación</p>
+                        <p>Horario: Lunes a Viernes, 9:00 a.m. - 6:00 p.m.</p>
+                    </div>
+                </div>
+
+                <!-- Sede 3 -->
+                <div class="sede">
+                    <img src="./src/img/sedes/tumbes.webp" alt="Sucursal La Molina" class="imagen-sede">
+                    <div class="info-sede">
+                        <h3>Sucursal Tumbes</h3>
+                        <p>Colocar la ubicación</p>
+                        <p>Horario: Lunes a Sábado, 9:00 a.m. - 5:00 p.m.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="seccion-contacto-rapido">
+                <div class="contacto__caja" data-aos="flip-up" data-aos-duration="500">
+                    <p class="contacto__titulo">Contacto Rápido 👋</p>
+                </div>
+                <div class="contenedor-contacto">
+
+                    <!-- Teléfono -->
+                    <div class="contacto">
+                        <img src="./src/icon/phone.svg" alt="Teléfono" class="icono-contacto">
+                        <h3>Teléfono</h3>
+                        <p>(01) 123-4567</p>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contacto">
+                        <img src="./src/icon/whatsapp.svg" alt="WhatsApp" class="icono-contacto">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/51999999999" target="_blank">+51 999 999 999</a></p>
+                    </div>
+
+                    <!-- Correo -->
+                    <div class="contacto">
+                        <img src="/src/icon/email.svg" alt="Correo" class="icono-contacto">
+                        <h3>Correo Electrónico</h3>
+                        <p><a href="mailto:contacto@inmobiliaria.com">contacto@inmobiliaria.com</a></p>
+                    </div>
+
+                    <!-- Horario -->
+                    <div class="contacto">
+                        <img src="/src/icon/calendar.svg" alt="Horario" class="icono-contacto">
+                        <h3>Horario de Atención</h3>
+                        <p>Lun a Vie: 9am – 6pm</p>
+                        <p>Sáb: 9am – 1pm</p>
+                    </div>
+
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer_contenido">
+            <a href="#">
+                <img src="./src/img/logo_albec.png" alt="Logo de empresa ALBEC" draggable="false" class="logo">
+            </a>
+            <div class="footer_redes">
+                <p>Nuestras Redes</p>
+                <ul>
+                    <a href="#">
+                        <img class="icono" src="./src/icon/sm/facebook.webp" alt="ícono de facebook">
+                        Facebook
+                    </a>
+                    <a href="#">
+                        <img class="icono" src="./src/icon/sm/instagram.webp" alt="ícono de instagram">
+                        Instagram
+                    </a>
+                    <a href="#">
+                        <img class="icono" src="./src/icon/sm/tiktok.webp" alt="ícono de tiktok">
+                        Tiktok
+                    </a>
+                    <a href="#">
+                        <img class="icono" src="./src/icon/sm/linkedin.webp" alt="ícono de linkedin">
+                        Linkedin
+                    </a>
+                </ul>
+            </div>
+            <div class="footer_enlaces">
+                <ul>
+                    <a href="#">Inicio</a>
+                    <a href="#">Proyectos</a>
+                    <a href="#">Sedes</a>
+                    <a href="#">Nuestro equipo</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Nosotros</a>
+                </ul>
+            </div>
+            <p class="footer_informacion-bottom">ALBEC 2025. Todos los derechos reservados.</p>
+        </div>
+
+    </footer> <!-- FIN: FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

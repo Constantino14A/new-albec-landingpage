@@ -46,9 +46,6 @@
     row-gap: 4rem;
     width: min(100%, 40rem);
 }
-
-
-
 .proyectos a:nth-of-type(1) {
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -65,9 +62,8 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: transform 0.2s ease, filter .02s ease;
+    transition: transform 0.7s ease, filter .07s ease;
 }
-
 
 .proyecto p:nth-of-type(1) {
     color: var(--colorPrimario);
@@ -75,7 +71,11 @@
 }
 
 .proyecto p:nth-of-type(2) {
+    color: var(--blanco);
     font-family: var(--fuentePrincipal);
+    background-color: var(--colorPrimario2);
+    padding: .3rem .5rem;
+    border-radius: .3rem;
 }
 
 .proyecto a:nth-of-type(2) {
@@ -389,7 +389,7 @@
 }
 
 .testimonios-titulo {
-    background-color: var(--colorPrimario);
+    background-color: var(--colorPrimario2);
 
     color: var(--blanco);
     font-size: 3.6rem;
@@ -397,6 +397,7 @@
     font-style: italic;
     font-weight: 800;
     text-align: left;
+    text-shadow: 2px 2px 4px var(--negroAlpha);
     margin: 2rem 0 0 2rem;
     padding: 1rem;
     width: min(100%, 36rem);
@@ -695,6 +696,7 @@
     font-family: var(--fuentePrincipal);
     font-weight: 800;
     text-align: left;
+    text-shadow: 2px 2px 4px var(--negroAlpha);
 }
 
 .asesores__informacion {
@@ -788,7 +790,6 @@
     gap: 1rem;
     margin-top: .5rem;
 }
-
 
 /* ((UTILIDADES)) */
 
@@ -885,11 +886,6 @@
 
     .asesores__titulo {
         text-align: center;
-    }
-
-    /* ==> PRESENTACION */
-    .presentacion-video {
-        /* top: 10.3rem; */
     }
 
     /* ==> PROYECTOS */
@@ -1012,10 +1008,16 @@
     .presentacion {
         aspect-ratio: 16 / 11;
     }
-
+    
     .presentacion-video {
         aspect-ratio: 16 / 11;
     }
+    
+    /* =====> ASESORES */
+    .asesores {
+        padding: 18rem 0;
+    }
+    
 }
 
 @media (min-width: 1300px) {

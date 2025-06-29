@@ -1,0 +1,241 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALBEC</title>
+
+  <!-- FUENTE INTER(PRINCIPAL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- FUENTE FRAUNCES(HEADING) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,50&display=swap"
+    rel="stylesheet">
+
+  <!-- SWIPER JS(CARRUSEL) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- PLYR (BOTONES DE VIDEO) -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+  <!-- AOS (ANIMACIONES LIGERAS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- MAIN STYLE.CSS -->
+  <link rel="preload" href="./css/index-style.css" as="style">
+  <link rel="stylesheet" href="./css/index-style.css">
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="./index.html" class="navbar__logo">
+        <img src="./src/img/logo_albec_icon_blanco.webp" alt="Logo de ALBEC">
+        <div>
+          <p>ALBEC</p>
+          <p>INMOBILIARIA</p>
+        </div>
+      </a>
+      <label class="navbar_menu-button">
+        <input type="checkbox" class="button-checkbox" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar__enlaces" id="menu-enlaces">
+        <li><a class="navbar__enlace" href="./index.html">Inicio</a></li>
+        <li>
+          <a class="navbar__enlace" href="#">Proyectos</a>
+          <ul class="navbar__enlace--menu">
+            <li><a class="navbar__enlace" href="./palmo.html">Palmo Dorado</a></li>
+            <li><a class="navbar__enlace" href="./diamante.html">Diamante de Punta Sal</a></li>
+            <li><a class="navbar__enlace" href="./villa.html">Villa Real</a></li>
+          </ul>
+        </li>
+        <li><a class="navbar__enlace" href="./sedes.html">Sedes</a></li>
+        <li><a class="navbar__enlace" href="./quienes-somos.html">¿Quienes somos?</a></li>
+        <li><a class="navbar__enlace" href="#">Intranet</a></li>
+        <li><a class="navbar__enlace--contacto navbar__enlace" href="#">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header> <!-- FIN: HEADER -->
+  <main class="main">
+
+
+    <section class="presentacion-quienes_somos">
+      <img class="presentacion-quienes_somos-imagen" src="./src/img/quienes-somos/nosotros.webp"></img>
+    </section> <!-- FIN: PRESENTACION -->
+
+    <section class="quienes-somos">
+      <div>
+        <div class="qs-contenedor1">
+          <div class="quienes_somos__caja" data-aos="fade-up" data-aos-duration="1000">
+            <p class="quienes_somos__titulo">¿Quiénes Somos?</p>
+          </div>
+          <p>
+            Somos <b>ALBEC</b> una empresa inmobiliaria comprometida con ayudarte a encontrar el hogar ideal o la
+            inversión perfecta.
+            Con 5 años de experiencia en el sector, nos destacamos por brindar atención personalizada, confianza y
+            resultados concretos.
+          </p>
+        </div>
+        <div class="qs-contenedor2">
+          <img src="./src/img/quienes-somos/imagen-principal.webp" alt="imagen de la empresa ALBEC">
+        </div>
+      </div>
+      <div class="separador"></div> <!-- SEPARADOR NO SEMÁNTICO -->
+    </section>
+
+    <section class="valores-empresa">
+      <div class="quienes_somos__caja">
+        <p class="quienes_somos__titulo">Nuestros Pilares</p>
+      </div>
+      <div class="contenedor-valores">
+        <div class="valor-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="0">
+          <img src="./src/icon/step.svg" alt="Confianza">
+          <h3>Confianza</h3>
+          <p>Transparencia en cada paso del proceso inmobiliario.</p>
+        </div>
+        <div class="valor-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="50">
+          <img src="./src/icon/handshake.svg" alt="Compromiso">
+          <h3>Compromiso</h3>
+          <p>Nos involucramos con cada cliente como si fuera el único.</p>
+        </div>
+        <div class="valor-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+          <img src="./src/icon/light.svg" alt="Innovación">
+          <h3>Innovación</h3>
+          <p>Aplicamos herramientas tecnológicas para lograr resultados rápidos y efectivos.</p>
+        </div>
+        <div class="valor-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="150">
+          <img src="./src/icon/star.svg" alt="Calidad">
+          <h3>Calidad</h3>
+          <p>Altos estándares en asesoría, atención y seguimiento postventa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mision-vision">
+      <div class="quienes_somos__caja">
+        <p class="quienes_somos__titulo">Nuestra Identidad</p>
+      </div>
+      <div class="contenedor-mvo">
+        <div class="mvo-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="0">
+          <h3>Misión</h3>
+          <p>Ofrecer soluciones inmobiliarias que mejoren la vida de nuestros clientes, con ética, profesionalismo y
+            compromiso.</p>
+        </div>
+        <div class="mvo-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="50">
+          <h3>Visión</h3>
+          <p>Ser la inmobiliaria de referencia en el país, reconocida por la calidad humana y excelencia en cada
+            servicio.</p>
+        </div>
+        <div class="mvo-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+          <h3>Objetivo</h3>
+          <p>Brindar experiencias confiables en la compra, venta y alquiler de inmuebles, con resultados medibles y
+            clientes satisfechos.</p>
+        </div>
+      </div>
+      <div class="separador"></div> <!-- SEPARADOR NO SEMÁNTICO -->
+    </section>
+
+
+    <section class="nuestra-historia">
+      <div>
+        <div class="qs-contenedor1">
+          <div class="nuestra_historia__caja" data-aos="fade-up" data-aos-duration="1000">
+            <p class="nuestra_historia__titulo">Nuestra Historia</p>
+          </div>
+          <p>
+            Desde nuestros inicios en 2019, hemos acompañado a decenas de familias y ciudadanos en el proceso de encontrar
+            el lugar perfecto. Crecimos paso a paso, construyendo relaciones sólidas basadas en confianza y buenos
+            resultados.
+          </p>
+          <p>
+            Hoy contamos con un equipo multidisciplinario y varias sedes que nos permiten ofrecer una cobertura completa y
+            asesoría experta en todo tipo de propiedades.
+          </p>
+        </div>
+        <div class="qs-contenedor2">
+          <img src="./src/img/quienes-somos/imagen-secundaria.webp" alt="imagen de la empresa ALBEC">
+        </div>
+      </div>
+      <div class="separador"></div> <!-- SEPARADOR NO SEMÁNTICO -->
+    </section>
+
+    <section class="nuestro-equipo">
+      <div>
+        <div class="nuestro_equipo__caja" data-aos="fade-up" data-aos-duration="1000">
+          <p class="nuestro_equipo__titulo">Nuestro Equipo</p>
+        </div>
+        <div class="contenedor-equipo">
+          <div class="equipo-box">
+            <img src="./src/img/quienes-somos/imagen-equipo.webp" alt="Asesora Carla">
+            <h4>Contamos con un equipo multidisciplinario, que suman para demostrar nuestra labor eficiente.</h4>
+            <p>Subtítulo editar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer_contenido">
+      <a href="#">
+        <img src="./src/img/logo_albec.png" alt="Logo de empresa ALBEC" draggable="false" class="logo">
+      </a>
+      <div class="footer_redes">
+        <p>Nuestras Redes</p>
+        <ul>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/facebook.webp" alt="ícono de facebook">
+            Facebook
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/instagram.webp" alt="ícono de instagram">
+            Instagram
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/tiktok.webp" alt="ícono de tiktok">
+            Tiktok
+          </a>
+          <a href="#">
+            <img class="icono" src="./src/icon/sm/linkedin.webp" alt="ícono de linkedin">
+            Linkedin
+          </a>
+        </ul>
+      </div>
+      <div class="footer_enlaces">
+        <ul>
+          <a href="#">Inicio</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Sedes</a>
+          <a href="#">Nuestro equipo</a>
+          <a href="#">Contáctanos</a>
+          <a href="#">Nosotros</a>
+        </ul>
+      </div>
+      <p class="footer_informacion-bottom">ALBEC 2025. Todos los derechos reservados.</p>
+    </div>
+
+  </footer> <!-- FIN: FOOTER -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
